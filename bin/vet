@@ -1,0 +1,60 @@
+#!/bin/sh
+set -euf
+. "$(dirname "$(readlink -f "$0")")/unix-shell-script-kit"
+
+TOP=$(git rev-parse --show-toplevel)
+
+readme_link_urls() {
+	<"$TOP/README.md" markdown-text-to-link-urls
+}
+
+project_directory_paths() {
+	find "$TOP/projects" -type f -name Cargo.toml -print0 | xargs -0 dirname | sort
+}
+
+doc_link_urls() {
+	find "$TOP/doc" -name index.md -print0 | xargs -0 -I{} cat {} | markdown-text-to-link-urls | sort
+}
+
+vet_doc_dir() {
+	dir="$1"
+	directory_exists_or_die "$dir"
+	file_exists_or_die "$dir/index.md"
+	symlink_exists_or_die "$dir/README.md"
+}
+
+vet_project_dir() {
+	dir="$1"
+	directory_exists_or_die "$dir"
+	file_exists_or_die "$dir/Cargo.toml"
+	file_exists_or_die "$dir/.gitignore"
+}
+
+vet_readme_doc_urls() {
+	readme_link_urls | 
+	grep '^doc/' |
+	while read -r x; do 
+		vet_doc_dir "$x"
+	done
+}
+
+vet_readme_project_urls() {
+	readme_link_urls |
+	grep '^projects/' |
+	while read -r x; do 
+		vet_project_dir "$x"
+	done
+}
+
+vet_doc_project_urls() {
+	doc_link_urls |
+	grep '^/projects/' | 
+	sed 's/^\///' |
+	while read -r x; do 
+		vet_project_dir "$x"
+	done
+}
+
+vet_readme_doc_urls
+vet_readme_project_urls
+vet_doc_project_urls
