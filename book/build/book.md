@@ -59,19 +59,19 @@ Rust Guideposts provides sample projects. These projects are small Rust programs
 
 Some of the projects for topics are:
 
-* `from_and_into_traits`
-* `closures_for_iterators`
-* `test_driven_development`
-* `pass_by_value_or_reference`
-* `the_borrow_checker`
+* /projects/topics/from_and_into_traits
+* /projects/topics/closures_for_iterators
+* /projects/topics/test_driven_development
+* /projects/topics/pass_by_value_or_reference
+* /projects/topics/the_borrow_checker
 
 Some of the projects for crates are:
 
-* `assertables/values_strings_sets`
-* `csv/read_spreadsheet_file`
-* `reqwest/make_http_request`
-* `serde/parse_json_data`
-* `sqlx/create_table_insert_into_select`
+* /projects/crates/assertables/values_strings_sets
+* /projects/crates/csv/read_a_spreadsheet_file
+* /projects/crates/reqwest/make_http_requests
+* /projects/crates/serde/parse_json_data
+* /projects/crates/sqlx/create_table_insert_into_select
 
 Example command to run a project:
 
@@ -80,7 +80,7 @@ cd projects/topics/hello_world
 cargo run
 ```
 
-Each project also includes a simple integration test:
+Many of the projects include a simple integration test:
 
 ```sh
 cd projects/topics/hello_world
@@ -4364,7 +4364,7 @@ Overall, the Rust Textwrap crate is a powerful tool for formatting and wrapping 
 
 ## Textwrap crate - example
 
-Runnable code in /projects/crates/textwrap/fill_wrap
+[Runnable project](/projects/crates/textwrap/fill_wrap)
 
 Example of textwrap fill and wrap:
 
@@ -4421,7 +4421,7 @@ Overall, the Rust Cursive crate is a powerful tool for building interactive term
 
 ## Cursive crate - example
 
-Runnable code in /projects/crates/cursive/hello_world
+[Runnable project](/projects/crates/cursive/hello_world)
 
 Run a simple interactive terminal user interface program, by using the `cursive` crate.
 
@@ -4480,7 +4480,7 @@ This code creates a new Terminal with TermionBackend and draws a simple block on
 
 ## tui crate - examples
 
-Runnable code in /projects/crates/tui
+[Runnable project](/projects/crates/tui)
 
 Example to draw a block on the screen:
 
@@ -4843,7 +4843,7 @@ Rust is able to interact with the operating system interfaces for input-output (
 
 ## epoll crate - example
 
-Runnable code in /projects/crates/epoll/tcp_listener
+[Runnable project](/projects/crates/epoll/tcp_listener)
 
 Example to create a TCP listener and register it with epoll:
 
@@ -5015,7 +5015,7 @@ Some of the key features of Rust Diesel include:
 
 ## Diesel crate - example
 
-Runnable code in /projects/crates/diesel/hello_world_with_sqlite
+[Runnable project](/projects/crates/diesel/hello_world_with_sqlite)
 
 The Diesel crate is sophisticated because its typical use involves SQL migrations, database connections, automatic conversions from records to structs, and much more. The Diesel tutorial is excellent and well worth reading. This page has elided excerpts, to give you a taste.
 
@@ -5148,7 +5148,7 @@ tokio = { version = "1", features = ["full"] }
 
 ## sqlx crate - example
 
-Runnable code in /projects/crates/sqlx/create_table_insert_into_select
+[Runnable project](/projects/crates/sqlx/create_table_insert_into_select)
 
 Example to create a table, insert data, and select data:
 
@@ -5220,7 +5220,7 @@ Overall, Rust axum is well-suited for building microservices and APIs. If you're
 
 ## axum crate - example
 
-Runnable code in /projects/crates/axum/hello_world
+[Runnable project](/projects/crates/axum/hello_world)
 
 Example of using the axum crate to build a web service in Rust:
 
@@ -5286,7 +5286,7 @@ In summary, the Rust prost crate simplifies the process of working with Protocol
 
 ## prost crate - example
 
-Runnable code in /projects/crates/prost/serialize_deserialize_protobuf
+[Runnable project](/projects/crates/prost/serialize_deserialize_protobuf)
 
 Example code to serialize and deserialize a simple protobuf message:
 
@@ -5382,28 +5382,7 @@ fn Hello<G: Html>(cx: Scope) -> View<G> {
 
 ## Sycamore crate - example
 
-Runnable code in /projects/crates/sycamore/hello_world
-
-Create a project:
-
-```
-cargo new demo
-cd demo
-```
-
-Edit file `Cargo.toml` to add a recent Sycamore version via git and tag such as:
-
-```
-[dependencies.sycamore]
-git = "https://github.com/sycamore-rs/sycamore.git"
-tag = "0.9.0-beta.1"
-```
-
-You may want/need to uninstall old Rust versions such as:
-
-```sh
-brew uninstall rust
-```
+[Runnable project](/projects/crates/sycamore/hello_world)
 
 You may want/need to add a WASM target:
 
@@ -5411,9 +5390,9 @@ You may want/need to add a WASM target:
 rustup target add wasm32-unknown-unknown
 ```
 
-Edit the file `main.rs` which will contain your website code:
+Edit file `main.rs` which will contain your website code:
 
-```
+```rust
 use sycamore::prelude::*;
 
 #[component]
@@ -5435,12 +5414,6 @@ Create top-level file `index.html`:
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>My Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
   <body></body>
 </html>
 ```
@@ -5492,7 +5465,7 @@ async fn main() -> Result<()> {
 
 ## Tokio crate - example HTTP server
 
-Runnable code in /projects/crates/tokio/http_server
+[Runnable project](/projects/crates/tokio/http_server)
 
 You can use Tokio to build network applications, such as an HTTP server:
 
@@ -5646,7 +5619,7 @@ In summary, the Rust yew crate is a powerful, efficient, and easy-to-use web dev
 
 ## yew crate - example
 
-Runnable code in /projects/crates/yew
+[Runnable project](/projects/crates/yew)
 
 Exampel of a simple website:
 
@@ -5718,7 +5691,7 @@ Caveats:
 
 ## gtk4 crate - example
 
-Runnable code in /projects/crates/gtk4/hello_world
+[Runnable project](/projects/crates/gtk4/hello_world)
 
 Example "Hello, world!" using GTK from the docs:
 

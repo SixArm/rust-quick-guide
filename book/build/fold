@@ -40,12 +40,25 @@ sed -i.bak 's/^## /### /; s/^# /## /; s/^## \*\*\(.*\)\*\*$/# \1/' "$output" && 
 
 # Convert project links so pandoc doesn't make them footnotes.
 #
+# ## Runnable project items
+#
 # Input looks like:
 #
-#    [Runnable project](/projects/crates/tokio/http_server)
+#    [Runnable project](/projects/crates/foo/hello_world)
 #
 # Output should look like:
 #
-#    Runnable code in /projects/crates/tokio/http_server
+#    Runnable code in /projects/crates/foo/hello_world
 #
-sed -i.bak 's/^\[Runnable project](\(.*\))/Runnable code in \1/g' "$output" && rm "$output.bak"
+# ## Unsorted list items
+#
+# Input looks like:
+#
+#    * [foo/hello_world](/projects/crates/foo/hello_world)
+#
+# Output should look like:
+#
+#   * `/projects/crates/foo/hello_world`
+#
+sed -i.bak 's#^[Runnable project](\(/projects/.*\))#Runnable code in \1#g' "$output" && rm "$output.bak"
+sed -i.bak 's#^\* \[.*\](\(/projects/.*\))#* \1#g' "$output" && rm "$output.bak"
