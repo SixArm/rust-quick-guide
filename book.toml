@@ -1,0 +1,21 @@
+[book]
+title = "Rust Guideposts"
+authors = ["Joel Parker Henderson", "ChatGPT"]
+language = "en"
+multilingual = false
+src = "src"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html", "pdf"]
+
+[output.html]
+
+[output.html.print]
+enable = true
+
+[output.pdf]
+margin-top = 0.5
+margin-bottom = 0.5
+margin-left = 0.5
+margin-right = 0.5
