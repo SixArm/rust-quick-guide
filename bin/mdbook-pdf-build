@@ -1,0 +1,40 @@
+#!/bin/sh
+set -euf
+
+##
+# Create SUMMARY file
+##
+
+cat<<EOF > src/SUMMARY.md
+# SUMMARY
+
+* [Rust Guideposts](topics/sections/rust-guideposts.md)
+
+* [Table of Contents](TOC.md)
+
+
+# Starters
+EOF
+
+<README.md awk '/^## /{p=1}{if(p){print}}' |
+sed '/^## .*/d; s/^### /# /; s#](doc/topics/#](topics/#g;' >> src/SUMMARY.md
+
+##
+# Create TOC file
+##
+
+cat<<EOF > src/TOC.md
+# Table of Contents
+
+EOF
+
+<src/SUMMARY.md awk '/^# Starters/{p=1}{if(p){print}}' |
+sed 's/^# \(.*\)/<b>\1<\/b>/; s/^\* \[\(.*\)\].*$/* \1/' >> src/TOC.md
+
+##
+# Build the book
+##
+
+mdbook build
+mv book/pdf/output.pdf book/pdf/rust-guideposts.pdf
+open book/pdf/rust-guideposts.pdf
