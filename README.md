@@ -452,7 +452,7 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 
 * [Sycamore crate for reactive front-end](doc/crates/sycamore) + [example](doc/crates/sycamore/examples) <!-- + [project](!projects/crates/sycamore) -->
 
-* [Tokio crate for async/concurrency](doc/crates/tokio) + [example](doc/crates/tokio/examples) + [project](!projects/crates/tokio/http_server)
+* [Tokio crate for async/concurrency](doc/crates/tokio) + [example](doc/crates/tokio/examples) + [project](projects/crates/tokio/http_server)
 
 * [tonic crate for gRPC](doc/crates/tonic) + [example server](doc/crates/tonic/examples/server) + [example client](doc/crates/tonic/examples/client) + [project](projects/crates/tonic/hello_world)
 
@@ -463,7 +463,7 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 
 <!-- [](doc/book/sections/crates/graphics) -->
 
-* [gtk4 crate for GTK GUIs](doc/crates/gtk4) + [example](doc/crates/gtk4/examples) + [project](!projects/crates/gtk4/hello_world) -->
+* [gtk4 crate for GTK GUIs](doc/crates/gtk4) + [example](doc/crates/gtk4/examples) + [project](!projects/crates/gtk4/hello_world)
 
 * [egui crate for pure Rust GUIs](doc/crates/egui) + [project](projects/crates/egui/hello_world_with_eframe)
 

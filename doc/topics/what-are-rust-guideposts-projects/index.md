@@ -27,7 +27,7 @@ cd projects/topics/hello_world
 cargo run
 ```
 
-Each project also includes a simple integration test:
+Many of the projects also include a simple integration test:
 
 ```sh
 cd projects/topics/hello_world
