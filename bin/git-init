@@ -1,0 +1,40 @@
+#!/bin/sh
+
+git add README.md
+git commit -m "Add README.md"
+
+git add LICENSE.md
+git commit -m "Add LICENSE.md"
+
+git add CONTRIBUTING.md
+git commit -m "Add CONTRIBUTING.md" 
+
+git add Cargo.*
+git commit -m "Add Cargo.toml and Cargo.lock"
+
+git add src/
+git commit -m "Add src"
+
+git add .gitignore
+git commit -m "Ignore target directory" .gitignore
+
+git add book.toml
+git commit -m "Add book.toml for Rust mdbook"
+
+git add Makefile
+git commit -m "Add Makefile"
+
+git add book
+git commit -m "Add book build"
+
+git add defer
+git commit -m "Add /defer"
+
+find bin -type f | sort | while read x; do git add "$x"; git commit -m "Add $x"; done
+
+find doc/topics -type d -depth 1 | sort | while read x; do git add "$x"; git commit -m "Add $x"; done
+find doc/crates -type d -depth 1 | sort | while read x; do git add "$x"; git commit -m "Add $x"; done
+find doc/book   -type d -depth 1 | sort | while read x; do git add "$x"; git commit -m "Add $x"; done
+
+find projects/topics -type d -depth 1 | sort | while read x; do git add "$x"; git commit -m "Add $x"; done
+find projects/crates -type d -depth 2 | sort | while read x; do git add "$x"; git commit -m "Add $x"; done
