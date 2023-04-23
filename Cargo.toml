@@ -1,0 +1,9 @@
+[package]
+name = "rust_guideposts"
+version = "0.8.0"
+edition = "2021"
+authors = ["Joel Parker Henderson <joel@joelparkerhenderson.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
