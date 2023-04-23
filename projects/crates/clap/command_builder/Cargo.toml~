@@ -1,0 +1,10 @@
+[package]
+name = "rust_guideposts_clap_command-builder"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Use the feature "cargo" to use the `command!` macro.
+clap = { version = "4", features = ["cargo"] }
