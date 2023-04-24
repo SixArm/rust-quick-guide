@@ -48,12 +48,12 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 
 * [What are good projects to learn Rust?](doc/topics/what-are-good-projects-to-learn-rust)
 
+* [Is Rust a good first language?](doc/topics/is-rust-a-good-first-language)
+
 
 ### Caveats
 
 <!-- [](doc/book/sections/caveats) -->
-
-* [Is Rust a good first language?](doc/topics/is-rust-a-good-first-language)
 
 * [What are the hardest parts of Rust?](doc/topics/what-are-the-hardest-parts-of-rust)
 
@@ -260,8 +260,6 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 
 * [Access a database with rusqlite](doc/topics/acccess-a-database-with-rusqlite) + [project](projects/topics/access_a_database_with_rusqlite)
 
-<!-- * [Aspect-oriented programming (AOP)](!doc/topics/aspect-oriented-programming) + [example](!doc/topics/aspect-oriented-programming/examples) + [project](!projects/topics/aspect-oriented-programming) -->
-
 * [Benchmark run times with Bencher](doc/topics/benchmark-times-with-bencher) + [example](doc/topics/benchmark-times-with-bencher/examples) + [project](projects/topics/benchmark_times_with_bencher)
 
 * [Concurrency with std::thread](!doc/topics/concurrency-with-std-thread)
@@ -384,9 +382,12 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 
 * [Cursive crate for text user interfaces](doc/crates/cursive) + [example](doc/crates/cursive/examples) + [project](!projects/crates/cursive/hello_world)
 
+* [console, dialoguer, indicatif for CLIs](doc/crates/console) + [project](projects/crates/console/hello_world)
+  
 * [TUI crate for text user interfaces](doc/crates/tui) + [example](doc/crates/tui/examples) + [project](projects/crates/tui/terminal_draw_block)
 
 * [walkdir crate for traversing directories](doc/crates/walkdir) + [project](projects/crates/walkdir/list_entries)
+
 
 
 ### Crates we like for development workflows
