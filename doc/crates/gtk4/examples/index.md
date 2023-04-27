@@ -2,7 +2,7 @@
 
 [Runnable project](/projects/crates/gtk4/hello_world)
 
-Example "Hello, world!" using GTK from the docs:
+Example "Hello, World!" using GTK from the docs:
 
 ```rust
 use gtk4 as gtk;
@@ -20,7 +20,7 @@ fn main() -> glib::ExitCode {
             .application(app)
             .default_width(320)
             .default_height(200)
-            .title("Hello, world!")
+            .title("Hello, World!")
             .build();
 
         // Show the window.

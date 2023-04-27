@@ -10,7 +10,7 @@ To create a channel, you first need to import the module, then you can send mess
 use std::sync::mpsc;
 fn main() {
     let (sender, receiver) = mpsc::channel(); // create channel
-    sender.send("Hello, world!").unwrap(); // send message
+    sender.send("Hello, World!").unwrap(); // send message
     let message = receiver.recv().unwrap(); // receive message
 }
 ```

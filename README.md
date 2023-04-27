@@ -135,6 +135,8 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 
 * [dyn trait for dynamic dispatch](doc/topics/dyn-trait-for-dynamic-dispatch)
 
+* [dyn trait in a type position](doc/topics/dyn-trait-in-a-type-position)
+
 * [Eq, PartialEq, Ord, PartialOrd traits](doc/topics/eq-partialeq-ord-partialord-traits)
 
 * [From and Into traits for conversions](doc/topics/from-and-into-traits-for-conversions)

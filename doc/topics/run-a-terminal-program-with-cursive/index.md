@@ -10,7 +10,7 @@ fn main() {
     let mut siv = Cursive::default();
 
     siv.add_layer(
-        Dialog::around(TextView::new("Hello, world!"))
+        Dialog::around(TextView::new("Hello, World!"))
             .title("Cursive Example")
             .button("Quit", |s| s.quit()),
     );
@@ -20,6 +20,6 @@ fn main() {
 }
 ```
 
-This code creates a `Cursive` object, adds a `TextView` containing the message "Hello, world!" to a `Dialog`, and then displays the dialog with a "Quit" button that will close the application when clicked.
+This code creates a `Cursive` object, adds a `TextView` containing the message "Hello, World!" to a `Dialog`, and then displays the dialog with a "Quit" button that will close the application when clicked.
 
 Add the `cursive` crate dependency to the `Cargo.toml` file, then you can run this code using `cargo run`.

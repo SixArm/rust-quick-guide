@@ -5,13 +5,13 @@ In Rust, a compound type is a type that is composed of other types. There are tw
 Tuples: A tuple is an ordered list of elements of different types. Tuples in Rust are declared using parentheses and the elements are separated by commas. For example, the following code creates a tuple containing a string and an integer:
 
 ```rust
-let my_tuple = ("Hello, world!", 42);
+let my_tuple = ("Hello, World!", 42);
 ```
 
 We can access the individual elements of a tuple using indexing syntax:
 
 ```rust
-let my_tuple = ("Hello, world!", 42);
+let my_tuple = ("Hello, World!", 42);
 let my_string = my_tuple.0;
 let my_int = my_tuple.1;
 ```

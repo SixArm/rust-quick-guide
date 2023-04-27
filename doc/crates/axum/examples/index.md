@@ -9,7 +9,7 @@ use axum::{Router, routing::get};
 use std::net::SocketAddr;
 
 async fn hello() -> &'static str {
-    "Hello, world!"
+    "Hello, World!"
 }
 
 #[tokio::main]
@@ -24,9 +24,9 @@ async fn main() {
 }
 ```
 
-In this example, we define a web service that receieves HTTP GET requests, and responds with "Hello, world!".
+In this example, we define a web service that receieves HTTP GET requests, and responds with "Hello, World!".
 
-We define an asynchronous function `hello`. It returns the static string "Hello, world!".
+We define an asynchronous function `hello`. It returns the static string "Hello, World!".
 
 We define a router using the `Router::new()` function, and use the `route()` method to define a route that maps the root URL (`"/"`) to the hello_world handler function.
 

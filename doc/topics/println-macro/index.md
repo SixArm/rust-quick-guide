@@ -6,11 +6,11 @@ Here is an example code that uses the `println!` macro to print a simple message
 
 ```rust
 fn main() {
-    println!("Hello, world!");
+    println!("Hello, World!");
 }
 ```
 
-In this example, we call the `println!` macro with one argument: the string `"Hello, world!"`. The macro then prints the string to the console.
+In this example, we call the `println!` macro with one argument: the string `"Hello, World!"`. The macro then prints the string to the console.
 
 The `println!` macro is similar to the `print!` macro, but adds a newline character (`\n`) to the end of the output, while the `print!` macro does not.
 

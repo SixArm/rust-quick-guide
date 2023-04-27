@@ -2,7 +2,7 @@
 
 [Runnable project](/projects/crates/hyper/hello_world)
 
-Example "Hello, world!" server:
+Example "Hello, World!" server:
 
 ```rust
 use std::convert::Infallible;
@@ -10,7 +10,7 @@ use std::convert::Infallible;
 async fn handle(
     _: hyper::Request<Body>
 ) -> Result<hyper::Response<hyper::Body>, Infallible> {
-    Ok(hyper::Response::new("Hello, world!".into()))
+    Ok(hyper::Response::new("Hello, World!".into()))
 }
 
 #[tokio::main]

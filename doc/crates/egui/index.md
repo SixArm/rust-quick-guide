@@ -10,7 +10,7 @@ Example excerpt of egui:
 
 ```rust
 egui::CentralPanel::default().show(ctx, |ui| {
-    ui.heading("Hello, world!");
+    ui.heading("Hello, World!");
     ui.horizontal(|ui| {
         let name_label = ui.label("Your name: ");
         ui.text_edit_singleline(&mut self.name)

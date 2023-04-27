@@ -46,6 +46,6 @@ This code block is text, and not a test:
 
 ```rust
 ///  ```text
-/// Hello, world!
+/// Hello, World!
 /// ```
 ```

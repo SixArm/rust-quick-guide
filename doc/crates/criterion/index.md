@@ -1,6 +1,6 @@
 # Criterion crate for benchmarks
 
-https://crates.io/crates/criterion
+<https://crates.io/crates/criterion>
 
 The Rust Criterion crate, titled Criterion.rs, is a popular benchmarking library. It is used to measure and analyze the performance of Rust programs by running multiple iterations of a benchmark and collecting statistical data.
 

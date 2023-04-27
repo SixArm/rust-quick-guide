@@ -12,7 +12,7 @@ fn main() {
     let (tx, rx) = channel();
 
     thread::spawn(move || {
-        tx.send("Hello, world!").unwrap();
+        tx.send("Hello, World!").unwrap();
     });
 
     let message = rx.recv().unwrap();
