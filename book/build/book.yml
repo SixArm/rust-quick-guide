@@ -13,7 +13,7 @@ logo: "files/logo.png"
 logo-width: 100
 page-background:
 page-background-opacity:
-links-as-notes: true
+links-as-notes: false
 #lot: true
 #lof: true
 listings-disable-line-numbers: true

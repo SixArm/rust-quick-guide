@@ -38,27 +38,14 @@ done
 sed -i.bak 's/^## /### /; s/^# /## /; s/^## \*\*\(.*\)\*\*$/# \1/' "$output" && rm "$output.bak"
 
 
-# Convert project links so pandoc doesn't make them footnotes.
+# Convert project links from relative to absolute.
 #
-# ## Runnable project items
+# Example input:
 #
-# Input looks like:
+#     [Foo](/projects/foo)
 #
-#    [Runnable project](/projects/crates/foo/hello_world)
+# Example output:
 #
-# Output should look like:
+#     [Foo](https://github.com/SixArm/rust-guideposts/tree/main/projects/foo)
 #
-#    Runnable code in /projects/crates/foo/hello_world
-#
-# ## Unsorted list items
-#
-# Input looks like:
-#
-#    * [foo/hello_world](/projects/crates/foo/hello_world)
-#
-# Output should look like:
-#
-#   * `/projects/crates/foo/hello_world`
-#
-sed -i.bak 's#^[Runnable project](\(/projects/.*\))#Runnable code in \1#g' "$output" && rm "$output.bak"
-sed -i.bak 's#^\* \[.*\](\(/projects/.*\))#* \1#g' "$output" && rm "$output.bak"
+sed -i.bak 's#(/projects/#(https://github.com/SixArm/rust-guideposts/tree/main/projects/#g' "$output" && rm "$output.bak"

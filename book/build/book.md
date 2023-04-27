@@ -13,7 +13,7 @@ logo: "files/logo.png"
 logo-width: 100
 page-background:
 page-background-opacity:
-links-as-notes: true
+links-as-notes: false
 #lot: true
 #lof: true
 listings-disable-line-numbers: true
@@ -59,19 +59,19 @@ Rust Guideposts provides sample projects. These projects are small Rust programs
 
 Some of the projects for topics are:
 
-* /projects/topics/from_and_into_traits
-* /projects/topics/closures_for_iterators
-* /projects/topics/test_driven_development
-* /projects/topics/pass_by_value_or_reference
-* /projects/topics/the_borrow_checker
+* [from_and_into_traits](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/from_and_into_traits)
+* [closures_for_iterators](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/closures_for_iterators)
+* [test_driven_development](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/test_driven_development)
+* [pass_by_value_or_reference](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/pass_by_value_or_reference)
+* [the_borrow_checker](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/the_borrow_checker)
 
 Some of the projects for crates are:
 
-* /projects/crates/assertables/values_strings_sets
-* /projects/crates/csv/read_a_spreadsheet_file
-* /projects/crates/reqwest/make_http_requests
-* /projects/crates/serde/parse_json_data
-* /projects/crates/sqlx/create_table_insert_into_select
+* [assertables/values_strings_sets](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/assertables/values_strings_sets)
+* [csv/read_a_spreadsheet_file](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/csv/read_a_spreadsheet_file)
+* [reqwest/make_http_requests](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/reqwest/make_http_requests)
+* [serde/parse_json_data](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/serde/parse_json_data)
+* [sqlx/create_table_insert_into_select](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/sqlx/create_table_insert_into_select)
 
 Example command to run a project:
 
@@ -150,25 +150,25 @@ The license is a free libre open source license. We use the license because it e
 This page is a section divider and intentionally blank.
 
 
-## What is a Rust "Hello, world!" program?
+## What is a Rust "Hello, World!" program?
 
-In Rust, a simple "Hello, world!" program is:
+In Rust, a simple "Hello, World!" program is:
 
 ```rust
 fn main() {
-    println!("Hello, world!");
+    println!("Hello, World!");
 }
 ```
 
 This program contains a single function, `main()`, which is the entry point for the program. The function body is enclosed in curly braces `{}` and contains a single statement:
 
 ```rust
-println!("Hello, world!");
+println!("Hello, World!");
 ```
 
-This statement prints the text "Hello, world!" to the console using Rust's standard library macro `println!()`. The `println!()` macro is a convenient way to print formatted text to the console, and in this case, it simply prints the string literal "Hello, world!".
+This statement prints the text "Hello, World!" to the console using Rust's standard library macro `println!()`. The `println!()` macro is a convenient way to print formatted text to the console, and in this case, it simply prints the string literal "Hello, World!".
 
-When you run this program, you should see the text "Hello, world!" printed to the console.
+When you run this program, you should see the text "Hello, World!" printed to the console.
 
 To create this program, the typical way is to use the Rust `cargo` package manager, which can create an example project:
 
@@ -188,7 +188,7 @@ cargo run
 You should see the output:
 
 ```txt
-Hello, world!
+Hello, World!
 ```
 
 
@@ -367,11 +367,6 @@ Learning Rust can be a rewarding experience, and contributing to open-source pro
 
 These are just a few examples of the many open-source Rust projects available for learning and contributing. Whatever your interests, there is likely a Rust project out there that can help you develop your skills.
 
-# Caveats
-
-This page is a section divider and intentionally blank.
-
-
 ## Is Rust a good first language?
 
 <https://www.reddit.com/r/rust/comments/owmxhr> - paraphrased
@@ -391,6 +386,11 @@ If your goal is to dabble a little then Python is great. It sweeps a lot of inco
 On the one hand, Rust forces you to “program well” from the start, or things simply won’t work. This steers you away from many mistakes you can make in other langues, especially other low level langues. And if you can avoid getting into lifetimes too much, the base language is very nice to work with compared to most older languages.
 
 On the other hand, Rust forces you to think about things that some other languages handle automatically. Additionally, Rust is compiled and has less immediate ability to give you feedback outside of printing to the screen and warnings/errors. Many tools are also in 3rd party libraries, many which are still WIP, so you’ll need to learn more than just the language to do “cooler” stuff.
+
+
+# Caveats
+
+This page is a section divider and intentionally blank.
 
 
 ## What are the hardest parts of Rust?
@@ -554,7 +554,7 @@ To create a channel, you first need to import the module, then you can send mess
 use std::sync::mpsc;
 fn main() {
     let (sender, receiver) = mpsc::channel(); // create channel
-    sender.send("Hello, world!").unwrap(); // send message
+    sender.send("Hello, World!").unwrap(); // send message
     let message = receiver.recv().unwrap(); // receive message
 }
 ```
@@ -894,13 +894,13 @@ In Rust, a compound type is a type that is composed of other types. There are tw
 Tuples: A tuple is an ordered list of elements of different types. Tuples in Rust are declared using parentheses and the elements are separated by commas. For example, the following code creates a tuple containing a string and an integer:
 
 ```rust
-let my_tuple = ("Hello, world!", 42);
+let my_tuple = ("Hello, World!", 42);
 ```
 
 We can access the individual elements of a tuple using indexing syntax:
 
 ```rust
-let my_tuple = ("Hello, world!", 42);
+let my_tuple = ("Hello, World!", 42);
 let my_string = my_tuple.0;
 let my_int = my_tuple.1;
 ```
@@ -1335,6 +1335,44 @@ fn my_function(obj: &dyn MyTrait) {
 In this example, `my_function` takes a reference to a trait object that implements the `MyTrait` trait, with dynamic dispatch specified using the `dyn` keyword. This means that at runtime, the specific implementation of `my_method` for the given object will be determined dynamically.
 
 Using `dyn trait` allows Rust to provide runtime polymorphism, which is useful in situations where the concrete type of an object is not known at compile time, but needs to be determined at runtime. However, it can come at a performance cost compared to static dispatch, which is resolved at compile time.
+
+
+## dyn trait in a type position
+
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/dyn_trait_in_a_type_position)
+
+You can use `&dyn` with a trait name in a type position. This is useful to abstract over a variety of implementations.
+
+Example:
+
+```rust
+trait Speak {
+    fn speak(&self);
+}
+
+type Cat;
+
+impl Speak for Cat {
+    fn speak(&self) {
+        println!("meow");
+    }
+}
+
+type Dog;
+
+impl Speak for Dog {
+    fn speak(&self) {
+        println!("woof");
+    }
+}
+
+fn main() {
+    let pets: Vec<&dyn Speak> = vec![&Cat, &Dog];
+    for pet in pets {
+        pet.speak();
+    }
+}
+```
 
 
 ## Eq, PartialEq, Ord, PartialOrd traits
@@ -1831,11 +1869,11 @@ Here is an example code that uses the `println!` macro to print a simple message
 
 ```rust
 fn main() {
-    println!("Hello, world!");
+    println!("Hello, World!");
 }
 ```
 
-In this example, we call the `println!` macro with one argument: the string `"Hello, world!"`. The macro then prints the string to the console.
+In this example, we call the `println!` macro with one argument: the string `"Hello, World!"`. The macro then prints the string to the console.
 
 The `println!` macro is similar to the `print!` macro, but adds a newline character (`\n`) to the end of the output, while the `print!` macro does not.
 
@@ -2762,7 +2800,7 @@ This code block is text, and not a test:
 
 ```rust
 ///  ```text
-/// Hello, world!
+/// Hello, World!
 /// ```
 ```
 
@@ -3215,7 +3253,7 @@ fn main() {
     let mut siv = Cursive::default();
 
     siv.add_layer(
-        Dialog::around(TextView::new("Hello, world!"))
+        Dialog::around(TextView::new("Hello, World!"))
             .title("Cursive Example")
             .button("Quit", |s| s.quit()),
     );
@@ -3225,7 +3263,7 @@ fn main() {
 }
 ```
 
-This code creates a `Cursive` object, adds a `TextView` containing the message "Hello, world!" to a `Dialog`, and then displays the dialog with a "Quit" button that will close the application when clicked.
+This code creates a `Cursive` object, adds a `TextView` containing the message "Hello, World!" to a `Dialog`, and then displays the dialog with a "Quit" button that will close the application when clicked.
 
 Add the `cursive` crate dependency to the `Cargo.toml` file, then you can run this code using `cargo run`.
 
@@ -3815,7 +3853,7 @@ fn main() {
     let (tx, rx) = channel();
 
     thread::spawn(move || {
-        tx.send("Hello, world!").unwrap();
+        tx.send("Hello, World!").unwrap();
     });
 
     let message = rx.recv().unwrap();
@@ -4364,7 +4402,7 @@ Overall, the Rust Textwrap crate is a powerful tool for formatting and wrapping 
 
 ## Textwrap crate - example
 
-[Runnable project](/projects/crates/textwrap/fill_wrap)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/textwrap/fill_wrap)
 
 Example of textwrap fill and wrap:
 
@@ -4421,7 +4459,7 @@ Overall, the Rust Cursive crate is a powerful tool for building interactive term
 
 ## Cursive crate - example
 
-[Runnable project](/projects/crates/cursive/hello_world)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/cursive/hello_world)
 
 Run a simple interactive terminal user interface program, by using the `cursive` crate.
 
@@ -4433,7 +4471,7 @@ fn main() {
     let mut siv = Cursive::default();
 
     siv.add_layer(
-        Dialog::around(TextView::new("Hello, world!"))
+        Dialog::around(TextView::new("Hello, World!"))
             .title("Cursive Example")
             .button("Quit", |s| s.quit()),
     );
@@ -4443,7 +4481,49 @@ fn main() {
 }
 ```
 
-This code creates a `Cursive` object, adds a `TextView` containing the message "Hello, world!" to a `Dialog`, and then displays the dialog with a "Quit" button that will close the application when clicked.
+This code creates a `Cursive` object, adds a `TextView` containing the message "Hello, World!" to a `Dialog`, and then displays the dialog with a "Quit" button that will close the application when clicked.
+
+
+## console, dialoguer, indicatif for CLIs
+
+<https://crates.io/crates/console>
+
+<https://crates.io/crates/dialoguer>
+
+<https://crates.io/crates/indicatif>
+
+[project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/console/hello_world)
+  
+The `console` crate provides access to terminal features so you can build nicer looking command line interfaces. 
+
+The `dialoguer` crate helps you build small user inputs for the command line, such as prompts, inputs, selections, history, and more.
+
+The `indicatif` crate helps you build command line interfaces that report progress to users. It helps format anything that indicates progress.
+
+Example:
+
+```rust
+use console::Term;
+use dialoguer::Input;
+use indicatif::ProgressBar;
+
+fn main() -> std::io::Result<()> {
+    // console example
+    let term = Term::stdout();
+    term.write_line("Hello, World!")?;
+
+    // dialoguer example
+    let input = Input::<String>::new().interact_text()?;
+    term.write_line(&input)?;
+
+    // indicatif example
+    let bar = ProgressBar::new(10);
+    for _ in 0..10 { bar.inc(1); }
+    bar.finish();
+
+    Ok(())
+}
+```
 
 
 ## TUI crate for text user interfaces
@@ -4480,7 +4560,7 @@ This code creates a new Terminal with TermionBackend and draws a simple block on
 
 ## tui crate - examples
 
-[Runnable project](/projects/crates/tui)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/tui)
 
 Example to draw a block on the screen:
 
@@ -4843,7 +4923,7 @@ Rust is able to interact with the operating system interfaces for input-output (
 
 ## epoll crate - example
 
-[Runnable project](/projects/crates/epoll/tcp_listener)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/epoll/tcp_listener)
 
 Example to create a TCP listener and register it with epoll:
 
@@ -5015,7 +5095,7 @@ Some of the key features of Rust Diesel include:
 
 ## Diesel crate - example
 
-[Runnable project](/projects/crates/diesel/hello_world_with_sqlite)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/diesel/hello_world_with_sqlite)
 
 The Diesel crate is sophisticated because its typical use involves SQL migrations, database connections, automatic conversions from records to structs, and much more. The Diesel tutorial is excellent and well worth reading. This page has elided excerpts, to give you a taste.
 
@@ -5148,7 +5228,7 @@ tokio = { version = "1", features = ["full"] }
 
 ## sqlx crate - example
 
-[Runnable project](/projects/crates/sqlx/create_table_insert_into_select)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/sqlx/create_table_insert_into_select)
 
 Example to create a table, insert data, and select data:
 
@@ -5220,7 +5300,7 @@ Overall, Rust axum is well-suited for building microservices and APIs. If you're
 
 ## axum crate - example
 
-[Runnable project](/projects/crates/axum/hello_world)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/axum/hello_world)
 
 Example of using the axum crate to build a web service in Rust:
 
@@ -5229,7 +5309,7 @@ use axum::{Router, routing::get};
 use std::net::SocketAddr;
 
 async fn hello() -> &'static str {
-    "Hello, world!"
+    "Hello, World!"
 }
 
 #[tokio::main]
@@ -5244,9 +5324,9 @@ async fn main() {
 }
 ```
 
-In this example, we define a web service that receieves HTTP GET requests, and responds with "Hello, world!".
+In this example, we define a web service that receieves HTTP GET requests, and responds with "Hello, World!".
 
-We define an asynchronous function `hello`. It returns the static string "Hello, world!".
+We define an asynchronous function `hello`. It returns the static string "Hello, World!".
 
 We define a router using the `Router::new()` function, and use the `route()` method to define a route that maps the root URL (`"/"`) to the hello_world handler function.
 
@@ -5286,7 +5366,7 @@ In summary, the Rust prost crate simplifies the process of working with Protocol
 
 ## prost crate - example
 
-[Runnable project](/projects/crates/prost/serialize_deserialize_protobuf)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/prost/serialize_deserialize_protobuf)
 
 Example code to serialize and deserialize a simple protobuf message:
 
@@ -5382,7 +5462,7 @@ fn Hello<G: Html>(cx: Scope) -> View<G> {
 
 ## Sycamore crate - example
 
-[Runnable project](/projects/crates/sycamore/hello_world)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/sycamore/hello_world)
 
 You may want/need to add a WASM target:
 
@@ -5465,7 +5545,7 @@ async fn main() -> Result<()> {
 
 ## Tokio crate - example HTTP server
 
-[Runnable project](/projects/crates/tokio/http_server)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/tokio/http_server)
 
 You can use Tokio to build network applications, such as an HTTP server:
 
@@ -5619,7 +5699,7 @@ In summary, the Rust yew crate is a powerful, efficient, and easy-to-use web dev
 
 ## yew crate - example
 
-[Runnable project](/projects/crates/yew)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/yew)
 
 Exampel of a simple website:
 
@@ -5691,9 +5771,9 @@ Caveats:
 
 ## gtk4 crate - example
 
-[Runnable project](/projects/crates/gtk4/hello_world)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/gtk4/hello_world)
 
-Example "Hello, world!" using GTK from the docs:
+Example "Hello, World!" using GTK from the docs:
 
 ```rust
 use gtk4 as gtk;
@@ -5711,7 +5791,7 @@ fn main() -> glib::ExitCode {
             .application(app)
             .default_width(320)
             .default_height(200)
-            .title("Hello, world!")
+            .title("Hello, World!")
             .build();
 
         // Show the window.
@@ -5741,7 +5821,7 @@ Example excerpt of egui:
 
 ```rust
 egui::CentralPanel::default().show(ctx, |ui| {
-    ui.heading("Hello, world!");
+    ui.heading("Hello, World!");
     ui.horizontal(|ui| {
         let name_label = ui.label("Your name: ");
         ui.text_edit_singleline(&mut self.name)
