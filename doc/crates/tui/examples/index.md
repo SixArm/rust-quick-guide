@@ -1,6 +1,6 @@
 # tui crate - examples
 
-[Runnable project](/projects/crates/tui)
+[Runnable project](/projects/crates/tui/terminal_draw_block)
 
 Example to draw a block on the screen:
 

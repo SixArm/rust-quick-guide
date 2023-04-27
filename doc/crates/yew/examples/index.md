@@ -1,43 +1,23 @@
 # yew crate - example
 
-[Runnable project](/projects/crates/yew)
+[Runnable project](/projects/crates/yew/hello_world)
 
-Exampel of a simple website:
+Example of a web app that says "Hello, World!":
 
 ```rust
-#[macro_use]
-extern crate yew;
-
 use yew::prelude::*;
 
-struct Model { /* Your model's data here. */ }
-
-enum Msg { /* Your message types here. */ }
-
-impl Component for Model {
-    type Message = Msg;
-    type Properties = ();
-
-    fn create(_: Self::Properties, _: ComponentLink<Self>)
-    -> Self {
-        // Your create hook implementation here.
-        Model { /* Initialize your model data here. */ }
-    }
-
-    fn update(&mut self, msg: Self::Message) -> ShouldRender {
-        // Your message update implementation here.
-        true // Update the component always.
-    }
-
-    fn view(&self) -> Html {
-        // Your HTML template and rendering implementation here.
-        html! { <div>{ "Hello" }</div> }
+#[function_component(App)]
+fn app() -> Html {
+    html! {
+        <h1>{ "Hello, World!" }</h1>
     }
 }
 
 fn main() {
-    yew::start_app::<Model>();
+    yew::Renderer::<App>::new().render();
 }
 ```
 
-This code creates a Yew component, and renders a "Hello" message on the web page.
+This code creates a Yew component that returns HTML, then renders the component to the web page.
+

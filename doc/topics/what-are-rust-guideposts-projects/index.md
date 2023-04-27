@@ -16,7 +16,7 @@ Some of the projects for crates are:
 
 * [assertables/values_strings_sets](/projects/crates/assertables/values_strings_sets)
 * [csv/read_a_spreadsheet_file](/projects/crates/csv/read_a_spreadsheet_file)
-* [reqwest/make_http_requests](/projects/crates/reqwest/make_http_requests)
+* [reqwest/make_http_requests](/projects/crates/reqwest/make_http_request)
 * [serde/parse_json_data](/projects/crates/serde/parse_json_data)
 * [sqlx/create_table_insert_into_select](/projects/crates/sqlx/create_table_insert_into_select)
 
