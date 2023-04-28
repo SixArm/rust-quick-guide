@@ -69,7 +69,7 @@ Some of the projects for crates are:
 
 * [assertables/values_strings_sets](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/assertables/values_strings_sets)
 * [csv/read_a_spreadsheet_file](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/csv/read_a_spreadsheet_file)
-* [reqwest/make_http_requests](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/reqwest/make_http_requests)
+* [reqwest/make_http_requests](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/reqwest/make_http_request)
 * [serde/parse_json_data](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/serde/parse_json_data)
 * [sqlx/create_table_insert_into_select](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/sqlx/create_table_insert_into_select)
 
@@ -4560,7 +4560,7 @@ This code creates a new Terminal with TermionBackend and draws a simple block on
 
 ## tui crate - examples
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/tui)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/tui/terminal_draw_block)
 
 Example to draw a block on the screen:
 
@@ -4811,7 +4811,7 @@ cargo make <task-name>
 
 ## Criterion crate for benchmarks
 
-https://crates.io/crates/criterion
+<https://crates.io/crates/criterion>
 
 The Rust Criterion crate, titled Criterion.rs, is a popular benchmarking library. It is used to measure and analyze the performance of Rust programs by running multiple iterations of a benchmark and collecting statistical data.
 
@@ -5272,6 +5272,76 @@ async fn main() -> Result<(), sqlx::Error> {
 ```
 
 
+## ed25519_dalek crate
+
+<https://crates.io/crates/ed25519_dalek>
+
+The Rust ed25519_dalek crate provides cryptographic message signing, verifying,
+and related techniques to ensure the authenticity and integrity of a message. 
+
+Ed25519 is a type of elliptic curve cryptography (ECC) that uses the EdDSA
+(Edwards-curve Digital Signature Algorithm) signature scheme, and named after
+the prime field of order 2^255-19, which is the field over which the elliptic
+curve is defined.
+
+Ed25519 was designed to be a fast, secure, and efficient signature algorithm for
+use in a variety of cryptographic applications, including key agreement,
+encryption, and authentication. It was developed by Daniel J. Bernstein, Niels
+Duif, Tanja Lange, Peter Schwabe, and Bo-Yin Yang.
+
+The crate creates a digital signature, which is a mathematical algorithm that
+creates a unique code that represents the contents of the message. The digital
+signature is then attached to the message, indicating that the message has not
+been altered or tampered with, and that it originated from a particular sender.
+
+When the recipient receives the message, they can use the sender's public key to
+decrypt the digital signature, and verify that the message is not altered or corrupted,
+and that the message originated from the sender who possesses the private key.
+
+Cryptographic message signing is widely used in electronic communication to
+ensure the authenticity and integrity of messages, including email, digital
+documents, and online transactions. It provides a way for parties to verify the
+identity of each other and ensure that the information exchanged is trustworthy.
+
+
+## ed25519_dalek crate - example
+
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/ed25519-dalek/signing_and_verifying)
+
+Example:
+
+```rust
+use rand::rngs::OsRng;
+
+use ed25519_dalek::{
+    Signer, SigningKey, Signature, 
+    Verifier, VerifyingKey
+};
+
+pub fn main() {
+    // Create a message that we will sign.
+    let message: &[u8] = b"Hello, World!";
+
+    // Load a random number generator (RNG).
+    let mut rng = OsRng{};
+    
+    // Generate a signing key a.k.a. a keypair
+    let signing_key: SigningKey = 
+        SigningKey::generate(&mut rng);
+
+    // Sign the message
+    let signature: Signature = signing_key.sign(message);
+    
+    // Get the verifying key a.k.a. the keypair private key.
+    let verifying_key: VerifyingKey = 
+        signing_key.verifying_key();
+
+    // Verify the signature.
+    assert!(verifying_key.verify(message, &signature).is_ok());
+}
+```
+
+
 # Crates we like for web applications
 
 This page is a section divider and intentionally blank.
@@ -5680,9 +5750,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 ## yew crate for client-side web app
 
-The Rust yew crate is a web development framework that allows developing fast and efficient client-side web applications using Rust programming language. The Yew crate uses a virtual DOM implementation to efficiently handle changes and updates to the user interface. The Yew crate is similar to React in terms of concepts and usage, but it is written entirely in Rust, and it is optimized for performance and safety.
+The Rust yew crate is a web development framework that allows developing fast and efficient client-side web applications using Rust programming language. The Yew crate uses a virtual DOM implementation to efficiently handle changes and updates to the user interface. 
 
-Some key features of the Rust yew crate include:
+Key features include:
 
 - Single-file components: This feature allows developers to write reusable code components in a single file, making it easier to manage and maintain the codebase.
 
@@ -5692,54 +5762,33 @@ Some key features of the Rust yew crate include:
 
 - Web assembly support: The Rust yew crate supports web assembly, which makes it easier to write web apps that can run natively on desktop and mobile devices.
 
-In summary, the Rust yew crate is a powerful, efficient, and easy-to-use web development framework that enables developers to build fast and scalable web applications
-
-
+The Yew crate is similar to React in terms of concepts and usage, but it is written entirely in Rust, and it is optimized for performance and safety.
 
 
 ## yew crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/yew)
+[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/yew/hello_world)
 
-Exampel of a simple website:
+Example of a web app that says "Hello, World!":
 
 ```rust
-#[macro_use]
-extern crate yew;
-
 use yew::prelude::*;
 
-struct Model { /* Your model's data here. */ }
-
-enum Msg { /* Your message types here. */ }
-
-impl Component for Model {
-    type Message = Msg;
-    type Properties = ();
-
-    fn create(_: Self::Properties, _: ComponentLink<Self>)
-    -> Self {
-        // Your create hook implementation here.
-        Model { /* Initialize your model data here. */ }
-    }
-
-    fn update(&mut self, msg: Self::Message) -> ShouldRender {
-        // Your message update implementation here.
-        true // Update the component always.
-    }
-
-    fn view(&self) -> Html {
-        // Your HTML template and rendering implementation here.
-        html! { <div>{ "Hello" }</div> }
+#[function_component(App)]
+fn app() -> Html {
+    html! {
+        <h1>{ "Hello, World!" }</h1>
     }
 }
 
 fn main() {
-    yew::start_app::<Model>();
+    yew::Renderer::<App>::new().render();
 }
 ```
 
-This code creates a Yew component, and renders a "Hello" message on the web page.
+This code creates a Yew component that returns HTML, then renders the component to the web page.
+
+
 
 # Crates we like for graphics & games
 

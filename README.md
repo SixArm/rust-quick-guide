@@ -440,7 +440,8 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 
 * [sqlx crate for SQL databases](doc/crates/sqlx) + [example](doc/crates/sqlx/examples) + [project](projects/crates/sqlx/create_table_insert_into_select)
 
-
+* [ed25519_dalek crate for message signing](doc/crates/ed25519_dalek) + [example](doc/crates/ed25519_dalek/examples) + [project](/projects/crates/ed25519_dalek/signing_and_verifying)
+  
 ### Crates we like for web applications
 
 <!-- [](doc/book/sections/crates/web) -->
