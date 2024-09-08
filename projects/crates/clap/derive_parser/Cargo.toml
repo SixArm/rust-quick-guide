@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_clap_derive_parser"
+name = "rust_summaries_clap_derive_parser"
 version = "0.1.0"
 edition = "2021"
 

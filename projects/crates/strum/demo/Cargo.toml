@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_strum_demo"
+name = "rust_summaries_strum_demo"
 version = "0.1.0"
 edition = "2021"
 

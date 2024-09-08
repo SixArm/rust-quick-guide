@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_egui_hello_world_with_eframe"
+name = "rust_summaries_egui_hello_world_with_eframe"
 version = "0.1.0"
 edition = "2021"
 

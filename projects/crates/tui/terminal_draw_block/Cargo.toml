@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_tui_terminal_draw_block"
+name = "rust_summaries_tui_terminal_draw_block"
 version = "0.1.0"
 edition = "2021"
 

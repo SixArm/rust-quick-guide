@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rust_guideposts_topics_display_trait"
+name = "rust_summaries_topics_display_trait"
 version = "0.1.0"

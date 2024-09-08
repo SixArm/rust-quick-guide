@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_axum_hello_world"
+name = "rust_summaries_axum_hello_world"
 version = "0.1.0"
 edition = "2021"
 

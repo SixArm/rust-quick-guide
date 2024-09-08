@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_log_info_warn_error_debug"
+name = "rust_summaries_log_info_warn_error_debug"
 version = "0.1.0"
 edition = "2021"
 

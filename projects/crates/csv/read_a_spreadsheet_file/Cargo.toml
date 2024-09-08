@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_csv_read_a_spreadsheet_file"
+name = "rust_summaries_csv_read_a_spreadsheet_file"
 version = "0.1.0"
 edition = "2021"
 

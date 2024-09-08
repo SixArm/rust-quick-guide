@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_topics_access_a_database_with_rusqlite"
+name = "rust_summaries_topics_access_a_database_with_rusqlite"
 version = "0.1.0"
 edition = "2021"
 

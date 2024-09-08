@@ -1,8 +1,8 @@
 # Contributing
 
-Rust Guideposts are a free community resource, and we welcome help.
+Rust Quick Guide is a free community resource, and we welcome help.
 
-Anyone can edit these guideposts to improve them, such as to edit an existing page, or add a new page, or refactor how the pages are organized. You can do this a variety of ways.
+Anyone can edit these summaries to improve them, such as to edit an existing page, or add a new page, or refactor how the pages are organized. You can do this a variety of ways.
 
 * You can create a GitHub pull request that provides the changes you want.
 

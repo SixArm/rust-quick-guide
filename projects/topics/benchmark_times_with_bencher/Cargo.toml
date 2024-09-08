@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_topics_benchmark_times_with_bencher"
+name = "rust_summaries_topics_benchmark_times_with_bencher"
 version = "0.1.0"
 edition = "2021"
 

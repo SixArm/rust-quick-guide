@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_topics_list_directories_with_walkdir"
+name = "rust_summaries_topics_list_directories_with_walkdir"
 version = "0.1.0"
 edition = "2021"
 

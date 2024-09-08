@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rust_guideposts_topics_the_borrow_checker"
+name = "rust_summaries_topics_the_borrow_checker"
 version = "0.1.0"

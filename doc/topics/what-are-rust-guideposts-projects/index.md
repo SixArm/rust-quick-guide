@@ -1,8 +1,8 @@
-# What are Rust Guideposts' projects?
+# What are Rust Quick Guide' projects?
 
-<https://github.com/sixarm/rust-guideposts>
+<https://github.com/sixarm/rust-summaries>
 
-Rust Guideposts provides sample projects. These projects are small Rust programs that you can read, build, and run. Each project demonstrates one quick topic summary, or demonstrates one crate. The projects are in the Rust Guideposts repository, in the `projects` directory.
+Rust Quick Guide provides sample projects. These projects are small Rust programs that you can read, build, and run. Each project demonstrates one quick topic summary, or demonstrates one crate. The projects are in the Rust Quick Guide repository, in the `projects` directory.
 
 Some of the projects for topics are:
 

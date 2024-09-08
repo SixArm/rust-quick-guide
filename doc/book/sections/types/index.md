@@ -1,3 +1,3 @@
-# **Type guideposts**
+# **Type summaries**
 
 This page is a section divider and intentionally blank.

@@ -29,5 +29,5 @@ Output:
 144
 ```
 
-The "Fibonacci" program is frequently seen in programming for benchmarking, because the calculations and the recursions grow very quickly, and also because there are a variety of ways to optimize the program to run faster, to work without recursions, and to use less memory. For more about this, see the Rust Guideposts page "Memoize a function with cached".
+The "Fibonacci" program is frequently seen in programming for benchmarking, because the calculations and the recursions grow very quickly, and also because there are a variety of ways to optimize the program to run faster, to work without recursions, and to use less memory. For more about this, see the Rust Quick Guide page "Memoize a function with cached".
 

@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_rand_rng_gen_range"
+name = "rust_summaries_rand_rng_gen_range"
 version = "0.1.0"
 edition = "2021"
 

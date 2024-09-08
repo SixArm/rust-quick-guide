@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_rusqlite_create_table_insert_into_select_from"
+name = "rust_summaries_rusqlite_create_table_insert_into_select_from"
 version = "0.1.0"
 edition = "2021"
 

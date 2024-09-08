@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_textwrap_fill_wrap"
+name = "rust_summaries_textwrap_fill_wrap"
 version = "0.1.0"
 edition = "2021"
 

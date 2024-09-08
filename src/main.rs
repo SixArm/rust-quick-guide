@@ -1,4 +1,4 @@
 fn main() {
-    println!("Rust Guideposts");
-    println!("https://github.com/sixarm/rust-guideposts");
+    println!("Rust Quick Guide");
+    println!("https://github.com/sixarm/rust-summaries");
 }

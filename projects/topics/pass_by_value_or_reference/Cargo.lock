@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rust_guideposts_topics_pass_by_value_or_reference"
+name = "rust_summaries_topics_pass_by_value_or_reference"
 version = "0.1.0"

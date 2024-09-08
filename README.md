@@ -1,10 +1,10 @@
-# Rust Guideposts
+# Rust Quick Guide
 
-Rust Guideposts are quick topic summaries to help people learn about the Rust programming language, ecosystem, concepts, crates, and more. You can try any topic, in any order, at any time, akin to a frequently asked questions resource.
+Rust Quick Guide provides short topic explanations to help people learn about the Rust programming language, ecosystem, concepts, crates, and more. You can try any topic, in any order, at any time, akin to a frequently asked questions resource.
 
-Rust Guideposts work best as an adjunct to a comprehensive Rust book, such as the The Rust Programming Language. The book is valuable to read, cover to cover, for its excellent technical explanations.
+Rust Quick Guide works best as an adjunct to a comprehensive Rust book, such as the The Rust Programming Language. The book is valuable to read, cover to cover, for its excellent technical explanations.
 
-We welcome constructive advice, new topic ideas, pull requests, open issues, and the like. See CONTRIBUTING.md. Rust Guideposts are continually evolving, with ongoing additions, corrections, and optimizations.
+We welcome constructive advice, new topic ideas, pull requests, open issues, and the like. See CONTRIBUTING.md. Rust Quick Guide is continually evolving, with ongoing additions, corrections, and optimizations.
 
 
 ## Start here
@@ -14,9 +14,9 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 
 <!-- [](doc/book/sections/introduction) -->
 
-* [What are Rust Guideposts?](doc/topics/what-are-rust-guideposts)
+* [What is the Rust Quick Guide?](doc/topics/what-are-rust-summaries)
 
-* [What are Rust Guideposts' projects?](doc/topics/what-are-rust-guideposts-projects)
+* [What are the Rust Quick Guide projects?](doc/topics/what-are-rust-summaries-projects)
 
 * [Who is this for?](doc/topics/who-is-this-for)
 
@@ -96,7 +96,7 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 ## Types, Traits, Keywords, Macros
 
 
-### Type guideposts
+### Type summaries
 
 <!-- [](doc/book/sections/types) -->
 
@@ -123,7 +123,7 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 * [Pin type for memory location](doc/topics/pin-type-for-memory-location) + [example](doc/topics/pin-type-for-memory-location/examples)
 
 
-### Trait guideposts
+### Trait summaries
 
 <!-- [](doc/book/sections/traits) -->
 
@@ -150,7 +150,7 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 * [Sealed traits](doc/topics/sealed-traits)
 
 
-## Keywords guideposts
+## Keywords summaries
 
 <!-- [](doc/book/sections/keywords) -->
 
@@ -173,7 +173,7 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 * [trait keyword for polymorphism](doc/topics/trait-keyword-for-polymorphism)
 
 
-### Macro guideposts
+### Macro summaries
 
 <!-- [](doc/book/sections/macros) -->
 
@@ -502,10 +502,10 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 
 ## Tracking
 
-* Project: rust-guideposts
+* Project: rust-summaries
 * Version: 1.0.0
 * Created: 2023-03-08T20:29:33Z
 * Updated: 2023-04-10T15:23:16Z
 * License: CC-BY-NC-SA-4.0
-* Website: <https://github.com/sixarm/rust-guideposts>
+* Website: <https://github.com/sixarm/rust-summaries>
 * Contact: Joel Parker Henderson (joel@sixarm.com)

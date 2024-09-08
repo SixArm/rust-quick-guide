@@ -1,5 +1,5 @@
 ---
-title: "Rust Guideposts"
+title: "Rust Quick Guide"
 author: "By Joel Parker Henderson & ChatGPT"
 date: "2023-04-10"
 subtitle: "Ecosystem • Language • Concepts • Crates • More"
@@ -34,44 +34,44 @@ lang: en-US
 This page is a section divider and intentionally blank.
 
 
-## What are Rust Guideposts?
+## What are Rust Quick Guide?
 
-Rust Guideposts are quick topic summaries to help people learn about the Rust programming language, ecosystem, concepts, crates, and more.
+Rust Quick Guide provides quick topic explanations to help people learn about the Rust programming language, ecosystem, concepts, crates, and more.
 
 You can try any topic, in any order, at any time, akin to a frequently asked questions resource.
 
-Link: <https://github.com/sixarm/rust-guideposts>
+Link: <https://github.com/sixarm/rust-summaries>
 
-Rust Guideposts work best as an adjunct to a comprehensive Rust book, such as the The Rust Programming Language.
+Rust Quick Guide work best as an adjunct to a comprehensive Rust book, such as the The Rust Programming Language.
 
 A comprehensive book is valuable to read, cover to cover, for thorough technical explanations.
 
 Link: <https://doc.rust-lang.org/book/>
 
-We welcome constructive advice, new topic ideas, pull requests, open issues, and the like. See CONTRIBUTING.md. Rust Guideposts are continually evolving, with ongoing additions, corrections, and optimizations.
+We welcome constructive advice, new topic ideas, pull requests, open issues, and the like. See CONTRIBUTING.md. Rust Quick Guide provides continually evolving, with ongoing additions, corrections, and optimizations.
 
 
-## What are Rust Guideposts' projects?
+## What are Rust Quick Guide' projects?
 
-<https://github.com/sixarm/rust-guideposts>
+<https://github.com/sixarm/rust-summaries>
 
-Rust Guideposts provides sample projects. These projects are small Rust programs that you can read, build, and run. Each project demonstrates one quick topic summary, or demonstrates one crate. The projects are in the Rust Guideposts repository, in the `projects` directory.
+Rust Quick Guide provides sample projects. These projects are small Rust programs that you can read, build, and run. Each project demonstrates one quick topic summary, or demonstrates one crate. The projects are in the Rust Quick Guide repository, in the `projects` directory.
 
 Some of the projects for topics are:
 
-* [from_and_into_traits](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/from_and_into_traits)
-* [closures_for_iterators](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/closures_for_iterators)
-* [test_driven_development](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/test_driven_development)
-* [pass_by_value_or_reference](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/pass_by_value_or_reference)
-* [the_borrow_checker](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/the_borrow_checker)
+* [from_and_into_traits](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/from_and_into_traits)
+* [closures_for_iterators](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/closures_for_iterators)
+* [test_driven_development](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/test_driven_development)
+* [pass_by_value_or_reference](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/pass_by_value_or_reference)
+* [the_borrow_checker](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/the_borrow_checker)
 
 Some of the projects for crates are:
 
-* [assertables/values_strings_sets](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/assertables/values_strings_sets)
-* [csv/read_a_spreadsheet_file](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/csv/read_a_spreadsheet_file)
-* [reqwest/make_http_requests](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/reqwest/make_http_request)
-* [serde/parse_json_data](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/serde/parse_json_data)
-* [sqlx/create_table_insert_into_select](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/sqlx/create_table_insert_into_select)
+* [assertables/values_strings_sets](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/assertables/values_strings_sets)
+* [csv/read_a_spreadsheet_file](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/csv/read_a_spreadsheet_file)
+* [reqwest/make_http_requests](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/reqwest/make_http_request)
+* [serde/parse_json_data](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/serde/parse_json_data)
+* [sqlx/create_table_insert_into_select](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/sqlx/create_table_insert_into_select)
 
 Example command to run a project:
 
@@ -90,9 +90,9 @@ cargo test
 
 ## Who is this for?
 
-Rust Guideposts are for anyone who wants to learn about Rust, and who likes to browse quick topic summaries. We're creating it because we are very excited about Rust, and very excited about more people learning Rust.
+Rust Quick Guide provides for anyone who wants to learn about Rust, and who likes to browse quick topic explanations. We're creating it because we are very excited about Rust, and very excited about more people learning Rust.
 
-We're creating these guideposts to help teach students and junior-intermediate developers who are generally familiar with introductory programming concepts and programming languages.
+We're creating these summaries to help teach students and junior-intermediate developers who are generally familiar with introductory programming concepts and programming languages.
 
 Questions that come up frequently with our students and developers:
 
@@ -102,7 +102,7 @@ Questions that come up frequently with our students and developers:
 
 * Questions about Rust in practice, such as how to access a database, what tools do, and which libraries to choose.
 
-These guideposts are trying to answer these kinds of questions quickly and simply. Browse the topics you want, and skip the rest. And if you have questions, you can let us know, because we're continually adding topics and improving these guideposts.
+These summaries are trying to answer these kinds of questions quickly and simply. Browse the topics you want, and skip the rest. And if you have questions, you can let us know, because we're continually adding topics and improving these summaries.
 
 ### For Teachers
 
@@ -116,9 +116,9 @@ If you're a professional, we'd love to learn about how you and your company are 
 
 ## How can I contribute?
 
-Rust Guideposts are a free community resource, and we welcome help.
+Rust Quick Guide provides a free community resource, and we welcome help.
 
-Anyone can edit these guideposts to improve them, such as to edit an existing page, or add a new page, or refactor how the pages are organized. You can do this a variety of ways.
+Anyone can edit these summaries to improve them, such as to edit an existing page, or add a new page, or refactor how the pages are organized. You can do this a variety of ways.
 
 * You can create a GitHub pull request that provides the changes you want.
 
@@ -131,7 +131,7 @@ Anyone can edit these guideposts to improve them, such as to edit an existing pa
 
 All the work is available via our GitHub repostory.
 
-Link: <https://github.com/sixarm/rust-guideposts>
+Link: <https://github.com/sixarm/rust-summaries>
 
 All the projects are available in the `projects` directory.
 
@@ -266,7 +266,7 @@ Output:
 144
 ```
 
-The "Fibonacci" program is frequently seen in programming for benchmarking, because the calculations and the recursions grow very quickly, and also because there are a variety of ways to optimize the program to run faster, to work without recursions, and to use less memory. For more about this, see the Rust Guideposts page "Memoize a function with cached".
+The "Fibonacci" program is frequently seen in programming for benchmarking, because the calculations and the recursions grow very quickly, and also because there are a variety of ways to optimize the program to run faster, to work without recursions, and to use less memory. For more about this, see the Rust Quick Guide page "Memoize a function with cached".
 
 
 
@@ -838,7 +838,7 @@ Because the function is generic, it will be optimized by the Rust compiler to pe
 In this way, Rust demonstrates the concept of zero-cost abstraction, allowing developers to write modular, reusable code without sacrificing performance.
 
 
-# Type guideposts
+# Type summaries
 
 This page is a section divider and intentionally blank.
 
@@ -1212,7 +1212,7 @@ Once `pinned_data` is created, trying to move data results in a compile-time err
 We can still access the value of data through `pinned_data`, as shown by the `assert_eq!` statement. The reference remains valid, even if the data structure itself is moved.
 
 
-# Trait guideposts
+# Trait summaries
 
 This page is a section divider and intentionally blank.
 
@@ -1339,7 +1339,7 @@ Using `dyn trait` allows Rust to provide runtime polymorphism, which is useful i
 
 ## dyn trait in a type position
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/topics/dyn_trait_in_a_type_position)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/dyn_trait_in_a_type_position)
 
 You can use `&dyn` with a trait name in a type position. This is useful to abstract over a variety of implementations.
 
@@ -1536,7 +1536,7 @@ In this example, the Sealed trait is defined as pub and the implementations are 
 Because the private module is private, no other code outside the module can implement the Sealed trait, ensuring that only the types explicitly listed within the module can be used with the trait.
 
 
-# Keyword guideposts
+# Keyword summaries
 
 This page is a section divider and intentionally blank.
 
@@ -1856,7 +1856,7 @@ fn main() {
 Some of the common Rust traits are `Debug` and `Display` for formmating output, `Copy` and `Clone` for duplicating values, `From` and `Into` for converting values, and `Send` and `Sync` for multi-thread communication.
 
 
-# Macro guideposts
+# Macro summaries
 
 This page is a section divider and intentionally blank.
 
@@ -4402,7 +4402,7 @@ Overall, the Rust Textwrap crate is a powerful tool for formatting and wrapping 
 
 ## Textwrap crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/textwrap/fill_wrap)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/textwrap/fill_wrap)
 
 Example of textwrap fill and wrap:
 
@@ -4459,7 +4459,7 @@ Overall, the Rust Cursive crate is a powerful tool for building interactive term
 
 ## Cursive crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/cursive/hello_world)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/cursive/hello_world)
 
 Run a simple interactive terminal user interface program, by using the `cursive` crate.
 
@@ -4492,7 +4492,7 @@ This code creates a `Cursive` object, adds a `TextView` containing the message "
 
 <https://crates.io/crates/indicatif>
 
-[project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/console/hello_world)
+[project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/console/hello_world)
   
 The `console` crate provides access to terminal features so you can build nicer looking command line interfaces. 
 
@@ -4560,7 +4560,7 @@ This code creates a new Terminal with TermionBackend and draws a simple block on
 
 ## tui crate - examples
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/tui/terminal_draw_block)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/tui/terminal_draw_block)
 
 Example to draw a block on the screen:
 
@@ -4923,7 +4923,7 @@ Rust is able to interact with the operating system interfaces for input-output (
 
 ## epoll crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/epoll/tcp_listener)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/epoll/tcp_listener)
 
 Example to create a TCP listener and register it with epoll:
 
@@ -5095,7 +5095,7 @@ Some of the key features of Rust Diesel include:
 
 ## Diesel crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/diesel/hello_world_with_sqlite)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/diesel/hello_world_with_sqlite)
 
 The Diesel crate is sophisticated because its typical use involves SQL migrations, database connections, automatic conversions from records to structs, and much more. The Diesel tutorial is excellent and well worth reading. This page has elided excerpts, to give you a taste.
 
@@ -5228,7 +5228,7 @@ tokio = { version = "1", features = ["full"] }
 
 ## sqlx crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/sqlx/create_table_insert_into_select)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/sqlx/create_table_insert_into_select)
 
 Example to create a table, insert data, and select data:
 
@@ -5306,7 +5306,7 @@ identity of each other and ensure that the information exchanged is trustworthy.
 
 ## ed25519_dalek crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/ed25519-dalek/signing_and_verifying)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/ed25519-dalek/signing_and_verifying)
 
 Example:
 
@@ -5370,7 +5370,7 @@ Overall, Rust axum is well-suited for building microservices and APIs. If you're
 
 ## axum crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/axum/hello_world)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/axum/hello_world)
 
 Example of using the axum crate to build a web service in Rust:
 
@@ -5436,7 +5436,7 @@ In summary, the Rust prost crate simplifies the process of working with Protocol
 
 ## prost crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/prost/serialize_deserialize_protobuf)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/prost/serialize_deserialize_protobuf)
 
 Example code to serialize and deserialize a simple protobuf message:
 
@@ -5532,7 +5532,7 @@ fn Hello<G: Html>(cx: Scope) -> View<G> {
 
 ## Sycamore crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/sycamore/hello_world)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/sycamore/hello_world)
 
 You may want/need to add a WASM target:
 
@@ -5615,7 +5615,7 @@ async fn main() -> Result<()> {
 
 ## Tokio crate - example HTTP server
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/tokio/http_server)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/tokio/http_server)
 
 You can use Tokio to build network applications, such as an HTTP server:
 
@@ -5673,7 +5673,7 @@ Tokio also supports a range of programming languages and platforms, including C+
 
 ## tonic crate - example server
 
-Example tonic gRPC server; this code depends on protocol definitions that are in a *.proto file, not shown here. For more, see the Rust Guideposts git repository projects, which has a complete tonic "helloworld" server and client.
+Example tonic gRPC server; this code depends on protocol definitions that are in a *.proto file, not shown here. For more, see the Rust Quick Guide git repository projects, which has a complete tonic "helloworld" server and client.
 
 ```rust
 use tonic::{transport::Server, Request, Response, Status};
@@ -5721,7 +5721,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 ## tonic crate - example client
 
-Example tonic gRPC client; this code depends on protocol definitions that are in a *.proto file, not shown here. For more, see the Rust Guideposts git repository projects, which has a complete tonic "helloworld" server and client.
+Example tonic gRPC client; this code depends on protocol definitions that are in a *.proto file, not shown here. For more, see the Rust Quick Guide git repository projects, which has a complete tonic "helloworld" server and client.
 
 ```rust
 use hello_world::greeter_client::GreeterClient;
@@ -5767,7 +5767,7 @@ The Yew crate is similar to React in terms of concepts and usage, but it is writ
 
 ## yew crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/yew/hello_world)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/yew/hello_world)
 
 Example of a web app that says "Hello, World!":
 
@@ -5820,7 +5820,7 @@ Caveats:
 
 ## gtk4 crate - example
 
-[Runnable project](https://github.com/SixArm/rust-guideposts/tree/main/projects/crates/gtk4/hello_world)
+[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/gtk4/hello_world)
 
 Example "Hello, World!" using GTK from the docs:
 
@@ -6106,7 +6106,7 @@ I advocate for chariable donations to help improve our world. Some of my favorit
 
 ## About the ebook PDF
 
-The Rust Guideposts ebook PDF is generated from the repository markdown files. The process uses custom book build tools, fonts thanks to Adobe, our open source tools, and the program `pandoc`.
+The Rust Quick Guide ebook PDF is generated from the repository markdown files. The process uses custom book build tools, fonts thanks to Adobe, our open source tools, and the program `pandoc`.
 
 
 ### Book build tools

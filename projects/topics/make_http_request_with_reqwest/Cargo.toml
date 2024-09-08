@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_topics_make_http_request_with_reqwest"
+name = "rust_summaries_topics_make_http_request_with_reqwest"
 version = "0.1.0"
 edition = "2021"
 

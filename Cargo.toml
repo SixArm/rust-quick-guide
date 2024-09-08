@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts"
+name = "rust_summaries"
 version = "0.8.0"
 edition = "2021"
 authors = ["Joel Parker Henderson <joel@joelparkerhenderson.com>"]

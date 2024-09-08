@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_epoll_tcp_listener"
+name = "rust_summaries_epoll_tcp_listener"
 version = "0.1.0"
 edition = "2021"
 

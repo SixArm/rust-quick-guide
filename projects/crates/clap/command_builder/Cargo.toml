@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_clap_command_builder"
+name = "rust_summaries_clap_command_builder"
 version = "0.1.0"
 edition = "2021"
 

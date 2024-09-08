@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rust_guideposts_topics_closures_for_iterators"
+name = "rust_summaries_topics_closures_for_iterators"
 version = "0.1.0"

@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_topics_memoize_a_function_with_cached"
+name = "rust_summaries_topics_memoize_a_function_with_cached"
 version = "0.1.0"
 edition = "2021"
 

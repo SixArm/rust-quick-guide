@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_topics_regex_macro"
+name = "rust_summaries_topics_regex_macro"
 version = "0.1.0"
 edition = "2021"
 

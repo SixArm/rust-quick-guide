@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_assertables_values_strings_sets"
+name = "rust_summaries_assertables_values_strings_sets"
 version = "0.1.0"
 edition = "2021"
 

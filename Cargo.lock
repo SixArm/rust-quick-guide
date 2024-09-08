@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rust_guideposts"
+name = "rust_summaries"
 version = "0.8.0"

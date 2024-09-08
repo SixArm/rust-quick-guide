@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_flume_spawn_and_sum"
+name = "rust_summaries_flume_spawn_and_sum"
 version = "0.1.0"
 edition = "2021"
 

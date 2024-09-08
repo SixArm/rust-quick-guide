@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_prost_serialize_deserialize_protobuf"
+name = "rust_summaries_prost_serialize_deserialize_protobuf"
 version = "0.1.0"
 edition = "2021"
 

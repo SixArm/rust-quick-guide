@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_diesel_hello_world_with_sqlite"
+name = "rust_summaries_diesel_hello_world_with_sqlite"
 version = "0.1.0"
 edition = "2021"
 

@@ -29,10 +29,10 @@ help:
 
 book.md:
 	@echo "make book.md"
-	./fold
+	book-binder book.yml book.md "$$TOP/README.md" "https://github.com/SixArm/rust-summaries/tree/main/projects"
 
 book.pdf:
 	@echo "make book.pdf"
 	pandoc-from-markdown-to-pdf book.md -o book.pdf
-	rsync -av book.md  "../rust-guideposts-book-1.0.0.md"
-	rsync -av book.pdf "../rust-guideposts-book-1.0.0.pdf"
+	rsync -av book.md  "../rust-summaries-book-1.0.0.md"
+	rsync -av book.pdf "../rust-summaries-book-1.0.0.pdf"

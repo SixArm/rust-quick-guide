@@ -1,5 +1,5 @@
 [package]
-name = "rust_guideposts_once_cell_lazy_static_regex"
+name = "rust_summaries_once_cell_lazy_static_regex"
 version = "0.1.0"
 edition = "2021"
 

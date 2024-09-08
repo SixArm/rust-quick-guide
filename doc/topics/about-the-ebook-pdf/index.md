@@ -1,6 +1,6 @@
 # About the ebook PDF
 
-The Rust Guideposts ebook PDF is generated from the repository markdown files. The process uses custom book build tools, fonts thanks to Adobe, our open source tools, and the program `pandoc`.
+The Rust Quick Guide ebook PDF is generated from the repository markdown files. The process uses custom book build tools, fonts thanks to Adobe, our open source tools, and the program `pandoc`.
 
 
 ## Book build tools
