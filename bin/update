@@ -1,0 +1,4 @@
+#!/bin/sh
+set -euf
+TOP=$(git rev-parse --show-toplevel)
+find "$TOP/projects" -type d -exec test -e '{}'/Cargo.toml \; -exec sh -c "echo {} && cd {} && update-cargo-project" \;
