@@ -14,9 +14,9 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 
 <!-- [](doc/book/sections/introduction) -->
 
-* [What is the Rust Quick Guide?](doc/topics/what-are-rust-summaries)
+* [What is the Rust Quick Guide?](doc/topics/what-is-the-rust-quick-guide)
 
-* [What are the Rust Quick Guide projects?](doc/topics/what-are-rust-summaries-projects)
+* [What are the Rust Quick Guide projects?](doc/topics/what-are-the-rust-quick-guide-projects)
 
 * [Who is this for?](doc/topics/who-is-this-for)
 

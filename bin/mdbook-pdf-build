@@ -8,7 +8,7 @@ set -euf
 cat<<EOF > src/SUMMARY.md
 # SUMMARY
 
-* [Rust Quick Guide](topics/sections/rust-summaries.md)
+* [Rust Quick Guide](topics/sections/rust-quick-guide.md)
 
 * [Table of Contents](TOC.md)
 
@@ -36,5 +36,5 @@ sed 's/^# \(.*\)/<b>\1<\/b>/; s/^\* \[\(.*\)\].*$/* \1/' >> src/TOC.md
 ##
 
 mdbook build
-mv book/pdf/output.pdf book/pdf/rust-summaries.pdf
-open book/pdf/rust-summaries.pdf
+mv book/pdf/output.pdf book/pdf/rust-quick-guide.pdf
+open book/pdf/rust-quick-guide.pdf

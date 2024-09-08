@@ -12,3 +12,7 @@ test:
 .PHONY: vet
 vet:
 	bin/vet
+
+.PHONY: update
+update:
+	bin/update

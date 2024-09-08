@@ -1,10 +1,10 @@
-# What are Rust Quick Guide?
+# What is the Rust Quick Guide?
 
 Rust Quick Guide provides quick topic explanations to help people learn about the Rust programming language, ecosystem, concepts, crates, and more.
 
 You can try any topic, in any order, at any time, akin to a frequently asked questions resource.
 
-Link: <https://github.com/sixarm/rust-summaries>
+Link: <https://github.com/sixarm/rust-quick-guide>
 
 Rust Quick Guide work best as an adjunct to a comprehensive Rust book, such as the The Rust Programming Language.
 

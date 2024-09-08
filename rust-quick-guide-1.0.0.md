@@ -1,7 +1,7 @@
 ---
 title: "Rust Quick Guide"
 author: "By Joel Parker Henderson & ChatGPT"
-date: "2023-04-10"
+date: "2024-09-09"
 subtitle: "Ecosystem • Language • Concepts • Crates • More"
 #geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
 titlepage: true
@@ -29,20 +29,15 @@ subparagraph: true
 lang: en-US
 ---
 
-# Introduction
-
-This page is a section divider and intentionally blank.
-
-
 ## What is the Rust Quick Guide?
 
-Rust Quick Guide provides short topic explanations to help people learn about the Rust programming language, ecosystem, concepts, crates, and more.
+Rust Quick Guide provides quick topic explanations to help people learn about the Rust programming language, ecosystem, concepts, crates, and more.
 
 You can try any topic, in any order, at any time, akin to a frequently asked questions resource.
 
-Link: <https://github.com/sixarm/rust-summaries>
+Link: <https://github.com/sixarm/rust-quick-guide>
 
-Rust Quick Guide works best as an adjunct to a comprehensive Rust book, such as the The Rust Programming Language.
+Rust Quick Guide work best as an adjunct to a comprehensive Rust book, such as the The Rust Programming Language.
 
 A comprehensive book is valuable to read, cover to cover, for thorough technical explanations.
 
@@ -53,25 +48,25 @@ We welcome constructive advice, new topic ideas, pull requests, open issues, and
 
 ## What are the Rust Quick Guide projects?
 
-<https://github.com/sixarm/rust-summaries>
+<https://github.com/sixarm/rust-quick-guide>
 
 Rust Quick Guide provides sample projects. These projects are small Rust programs that you can read, build, and run. Each project demonstrates one quick topic summary, or demonstrates one crate. The projects are in the Rust Quick Guide repository, in the `projects` directory.
 
 Some of the projects for topics are:
 
-* [from_and_into_traits](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/from_and_into_traits)
-* [closures_for_iterators](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/closures_for_iterators)
-* [test_driven_development](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/test_driven_development)
-* [pass_by_value_or_reference](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/pass_by_value_or_reference)
-* [the_borrow_checker](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/the_borrow_checker)
+* [from_and_into_traits](/projects/topics/from_and_into_traits)
+* [closures_for_iterators](/projects/topics/closures_for_iterators)
+* [test_driven_development](/projects/topics/test_driven_development)
+* [pass_by_value_or_reference](/projects/topics/pass_by_value_or_reference)
+* [the_borrow_checker](/projects/topics/the_borrow_checker)
 
 Some of the projects for crates are:
 
-* [assertables/values_strings_sets](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/assertables/values_strings_sets)
-* [csv/read_a_spreadsheet_file](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/csv/read_a_spreadsheet_file)
-* [reqwest/make_http_requests](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/reqwest/make_http_request)
-* [serde/parse_json_data](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/serde/parse_json_data)
-* [sqlx/create_table_insert_into_select](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/sqlx/create_table_insert_into_select)
+* [assertables/values_strings_sets](/projects/crates/assertables/values_strings_sets)
+* [csv/read_a_spreadsheet_file](/projects/crates/csv/read_a_spreadsheet_file)
+* [reqwest/make_http_requests](/projects/crates/reqwest/make_http_request)
+* [serde/parse_json_data](/projects/crates/serde/parse_json_data)
+* [sqlx/create_table_insert_into_select](/projects/crates/sqlx/create_table_insert_into_select)
 
 Example command to run a project:
 
@@ -90,7 +85,7 @@ cargo test
 
 ## Who is this for?
 
-Rust Quick Guide provides for anyone who wants to learn about Rust, and who likes to browse quick topic explanations. We're creating it because we are very excited about Rust, and very excited about more people learning Rust.
+Rust Quick Guide is for anyone who wants to learn about Rust, and who likes to browse quick topic explanations. We're creating it because we are very excited about Rust, and very excited about more people learning Rust.
 
 We're creating these summaries to help teach students and junior-intermediate developers who are generally familiar with introductory programming concepts and programming languages.
 
@@ -131,7 +126,7 @@ Anyone can edit these summaries to improve them, such as to edit an existing pag
 
 All the work is available via our GitHub repostory.
 
-Link: <https://github.com/sixarm/rust-summaries>
+Link: <https://github.com/sixarm/rust-quick-guide>
 
 All the projects are available in the `projects` directory.
 
@@ -145,134 +140,10 @@ The project license is Creative Commons Attribution Non Commercial Share Alike 4
 The license is a free libre open source license. We use the license because it enables people to share improvements with everyone.
 
 
-# Welcome to Rust
-
-This page is a section divider and intentionally blank.
-
-
-## What is a Rust "Hello, World!" program?
-
-In Rust, a simple "Hello, World!" program is:
-
-```rust
-fn main() {
-    println!("Hello, World!");
-}
-```
-
-This program contains a single function, `main()`, which is the entry point for the program. The function body is enclosed in curly braces `{}` and contains a single statement:
-
-```rust
-println!("Hello, World!");
-```
-
-This statement prints the text "Hello, World!" to the console using Rust's standard library macro `println!()`. The `println!()` macro is a convenient way to print formatted text to the console, and in this case, it simply prints the string literal "Hello, World!".
-
-When you run this program, you should see the text "Hello, World!" printed to the console.
-
-To create this program, the typical way is to use the Rust `cargo` package manager, which can create an example project:
-
-```sh
-cargo new hello
-cd hello
-```
-
-Then edit the `src/main.rs` file, which is automatically created with the "hello world" code above. Change it as you wish.
-
-To run the program:
-
-```sh
-cargo run
-```
-
-You should see the output:
-
-```txt
-Hello, World!
-```
-
-
-## What is a Rust "FizzBuzz" program?
-
-A "FizzBuzz" program is a job interview challenge: print the numbers 1 to 100, except replace any multiple of 3 with "Fizz", any multiple of 5 with "Buzz", and any multiple of both 3 and 5 with "FizzBuzz".
-
-One way to write FizzBuzz:
-
-```rust
-for i in 1..=100 {
-    if i % 3 == 0 && i % 5 == 0 {
-        println!("FizzBuzz");
-    } else if i % 3 == 0 {
-        println!("Fizz");
-    } else if i % 5 == 0 {
-        println!("Buzz");
-    } else {
-        println!("{}", i);
-    }
-}
-```
-
-The example uses a `for` loop, `if`...`else` control flow statements, `%` modulo operator, `&&` logical operator, and `println!` macros to print output.
-
-FizzBuzz output should start with these lines:
-
-```text
-1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz
-```
-
-
-## What is a Rust "Fibonacci" program?
-
-A "Fibonacci" program is a job interview challenge: given an index number `n`, print its Fibonacci sequence term.
-
-The Fibonacci sequence is a mathematical sequence in which each number is the sum of the two preceding ones: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, etc. For example, index number `0` is the sequence term `0`, and index number `12` is the  sequence term `144`. 
-
-The example below defines a function named `fibonacci`. The function takes an input which is the Fibonacci sequence index number, and returns the Fibonacci sequence term number. For example, input index `0` returns term `0`, and input index  `12` returns term `144`.
-
-Example:
-
-```rust
-pub fn fibonacci(n: usize) -> usize {
-    match n {
-        0 => 0,
-        1 => 1,
-        2.. => fibonacci(n - 1) + fibonacci(n - 2),
-        _ => panic!("{}", n)
-    }
-}
-
-fn main() {
-    println!("{}", fibonacci(12));
-}
-```
-
-Output:
-
-```text
-144
-```
-
-The "Fibonacci" program is frequently seen in programming for benchmarking, because the calculations and the recursions grow very quickly, and also because there are a variety of ways to optimize the program to run faster, to work without recursions, and to use less memory. For more about this, see the Rust Quick Guide page "Memoize a function with cached".
 
 
 
-# Learning
 
-This page is a section divider and intentionally blank.
 
 
 ## What makes Rust good?
@@ -388,11 +259,6 @@ On the one hand, Rust forces you to “program well” from the start, or things
 On the other hand, Rust forces you to think about things that some other languages handle automatically. Additionally, Rust is compiled and has less immediate ability to give you feedback outside of printing to the screen and warnings/errors. Many tools are also in 3rd party libraries, many which are still WIP, so you’ll need to learn more than just the language to do “cooler” stuff.
 
 
-# Caveats
-
-This page is a section divider and intentionally blank.
-
-
 ## What are the hardest parts of Rust?
 
 While Rust is a powerful programming language with many benefits, it can also have some challenges. Here are some of the hardest parts:
@@ -481,30 +347,6 @@ Rust has gained a lot of popularity and adoption in recent years, but some compa
 * Legacy code: Many companies have existing codebases written in other languages, and transitioning to Rust may require significant time and resources. Companies may be hesitant to make this investment if the benefits of transitioning are not clear.
 
 Many of these concerns are actively being addressed by the Rust community, with ongoing efforts to improve the language's ecosystem and make it more accessible to developers of all backgrounds.
-
-
-# What makes Rust special?
-
-This page is a section divider and intentionally blank.
-
-
-## The borrow checker
-
-The Rust borrow checker is a tool that ensures memory safety in Rust programs by preventing data races and other forms of undefined behavior related to memory management. In Rust, memory is managed through a system of ownership and borrowing, where ownership represents exclusive control over a piece of memory, and borrowing represents temporary access to that memory.
-
-When a variable is created in Rust, it becomes the owner of the memory it represents. The owner is responsible for freeing the memory when the variable goes out of scope. However, Rust also allows you to borrow references to the memory owned by another variable, but with certain constraints. The borrow checker enforces these constraints to prevent invalid memory access and data races.
-
-The borrow checker analyzes Rust code to ensure that each reference to memory is valid and safe. It enforces a set of rules that govern how and when references can be created, used, and dropped. These rules include:
-
-* Only one mutable reference to a piece of memory can exist at a time.
-
-* Mutable references can't coexist with immutable references to the same piece of memory.
-
-* References must always be valid and non-null.
-
-* The lifetime of a reference must be shorter than the lifetime of the memory it refers to.
-
-The borrow checker is an important part of Rust's memory safety guarantees and has become one of the most notable features of the language. It can be challenging to work with at first, especially for developers coming from languages without similar constraints, but it ultimately helps catch many memory-related bugs at compile time rather than at runtime.
 
 
 ## The borrow checker - example
@@ -736,27 +578,6 @@ In unsafe code, Rust allows the use of several features that are not permitted i
 Code marked as unsafe doesn't mean it's inherently dangerous or incorrect. Unsafe code is often necessary for performance-critical code, interfacing with external systems, or implementing low-level abstractions. However, writing and working with unsafe code requires a deep understanding of Rust's memory and ownership model. Rust also provides several tools, such as unsafe blocks, to help ensure that unsafe code is written and used correctly.
 
 
-## WebAssembly (WASM)
-
-WebAssembly (WASM) is a binary instruction format that allows code to be executed in a sandboxed environment on web browsers, outside of the JavaScript runtime. Rust is one of the programming languages that can be compiled to WebAssembly, which allows Rust code to be executed in web browsers and other WASM environments.
-
-Rust's support for WebAssembly comes through the Rust stdweb and wasm-bindgen crates, which provide tools for interacting with the WASM environment from Rust code. These crates allow Rust code to be compiled to WASM and provide a bridge between Rust and JavaScript, enabling Rust functions to be called from JavaScript and vice versa.
-
-One of the main benefits of using Rust for WebAssembly is performance. Rust's focus on low-level control and efficient memory management make it a good fit for WASM, which has similar performance requirements to native code. Additionally, Rust's ownership and borrowing model can help prevent memory-related bugs in WASM code, which is especially important in the security-sensitive environment of the web.
-
-Rust's support for WebAssembly also extends beyond the web. WASM can be run in a variety of environments, including mobile devices, IoT devices, and server-side applications. Rust's cross-platform support and memory safety features make it a good choice for developing WASM applications that can run on a variety of platforms.
-
-To use the WASM crate, add the dependency to your project `Cargo.toml` file:
-
-```
-[dependencies]
-wasm-bindgen = "0.2.72"
-```
-
-Overall, Rust's support for WebAssembly makes it a powerful tool for developing high-performance, secure, and cross-platform applications that can be executed in a variety of environments, including web browsers.
-
-
-
 ## WebAssembly - example
 
 Create a new Rust project, such as running:
@@ -797,21 +618,6 @@ import("./wasm_example_bg.wasm").then((module) => {
 This JavaScript code loads the WASM module using the `import()` function, which is a new feature in JavaScript that allows you to dynamically load modules at runtime. Once the module is loaded, you can call your Rust function using the `add` variable.
 
 
-## Zero-cost abstractions
-
-In Rust, zero-cost abstractions are a design principle that refers to the idea that abstractions, such as functions and data structures, should not impose any runtime overhead compared to the equivalent low-level, manual code that they replace.
-
-This means that, while Rust's standard library provides a high-level API with powerful abstractions, the generated code should be just as fast and efficient as if the code were manually written with lower-level constructs.
-
-To achieve this, Rust uses a combination of static analysis and code generation techniques, such as inlining, loop unrolling, and code specialization. For example, the Rust compiler may choose to inline a function call instead of generating code to jump to the function at runtime, thereby avoiding the overhead of a function call.
-
-Furthermore, Rust's ownership and borrowing system allows the compiler to optimize the generated code by eliminating unnecessary memory allocations and deallocations, reducing runtime overhead and improving performance.
-
-This approach allows Rust developers to write high-level code that is easy to read and maintain, while still achieving the performance and efficiency of low-level code. This makes Rust a popular choice for performance-critical applications, such as game engines, web browsers, and operating systems.
-
-Overall, zero-cost abstractions are an important aspect of Rust's design, and they enable Rust to combine high-level abstractions with low-level performance, making it a powerful and efficient language for building complex and performance-critical systems.
-
-
 ## Zero-cost abstractions - example
 
 Here's an example of zero-cost abstrations:
@@ -836,11 +642,6 @@ The `add` function is generic, so it can be used with any type that implements `
 Because the function is generic, it will be optimized by the Rust compiler to perform as efficiently as possible. This means that using the `add` function will not incur any additional runtime overhead, even though it uses an abstraction (the `Add` trait) to make the function more generic and reusable.
 
 In this way, Rust demonstrates the concept of zero-cost abstraction, allowing developers to write modular, reusable code without sacrificing performance.
-
-
-# Type summaries
-
-This page is a section divider and intentionally blank.
 
 
 ## Scalar types
@@ -1156,23 +957,6 @@ fn main() {
 Here, an `Arc` shares ownership of a vector between multiple threads. The `Arc::new()` function creates a new `Arc` that points to a vector of `[1, 2, 3]`. The `clone()` method creates a new `Arc` that points to the same vector, and the reference count is incremented. The `thread::spawn()` function creates three threads, each of which iterates over the vector and adds the current loop index to each element. The results are collected into a new vector, which is printed to the console.
 
 
-## Pin type for memory location
-
-<https://doc.rust-lang.org/std/pin/>
-
-Rust `Pin` type is a type that is used to express that a value should not be moved in memory. When an object is pinned, it means that its memory location cannot change, even if other parts of the program try to move it.
-
-The `Pin` type is commonly used in Rust when dealing with data structures that hold references to other objects. In such cases, moving the data structure could invalidate the references, leading to undefined behavior.
-
-To create a pinned object, you can use the `Pin::new` function, which takes a reference to the object and returns a `Pin` wrapper around it. This Pin wrapper can then be used to access the object, but it cannot be moved or dropped without first calling the unpin method on it.
-
-Additionally, Rust provides a `Pin<&mut T>` type, which can be used to create a pinned reference to a mutable object. This allows you to modify the object through the reference while still ensuring that its memory location does not change.
-
-Overall, Rust Pin `type` is an important tool for ensuring memory safety when dealing with complex data structures and references. It allows you to express the requirement that certain objects should not be moved in memory, which can help prevent bugs and ensure the correctness of your program.
-
-
-
-
 ## Pin type - example
 
 Here's an example of how to use the Rust Pin type:
@@ -1210,11 +994,6 @@ In this example, we define a Data struct that holds a single integer value. We t
 Once `pinned_data` is created, trying to move data results in a compile-time error. Similarly, attempting to move `pinned_data` results in a compile-time error, because it is a wrapper around a pinned reference.
 
 We can still access the value of data through `pinned_data`, as shown by the `assert_eq!` statement. The reference remains valid, even if the data structure itself is moved.
-
-
-# Trait summaries
-
-This page is a section divider and intentionally blank.
 
 
 ## Copy trait and Clone trait for duplication
@@ -1339,7 +1118,7 @@ Using `dyn trait` allows Rust to provide runtime polymorphism, which is useful i
 
 ## dyn trait in a type position
 
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/topics/dyn_trait_in_a_type_position)
+[Runnable project](/projects/topics/dyn_trait_in_a_type_position)
 
 You can use `&dyn` with a trait name in a type position. This is useful to abstract over a variety of implementations.
 
@@ -1534,11 +1313,6 @@ pub fn foo<T: Sealed>(val: T) {
 In this example, the Sealed trait is defined as pub and the implementations are placed in a private module called private. The foo function is generic over T where T must implement the Sealed trait.
 
 Because the private module is private, no other code outside the module can implement the Sealed trait, ensuring that only the types explicitly listed within the module can be used with the trait.
-
-
-# Keyword summaries
-
-This page is a section divider and intentionally blank.
 
 
 ## enum keyword for enumerations
@@ -1856,11 +1630,6 @@ fn main() {
 Some of the common Rust traits are `Debug` and `Display` for formmating output, `Copy` and `Clone` for duplicating values, `From` and `Into` for converting values, and `Send` and `Sync` for multi-thread communication.
 
 
-# Macro summaries
-
-This page is a section divider and intentionally blank.
-
-
 ## println! macro for printing output
 
 The Rust `println!` macro is a built-in macro that is used to print text to stdout (standard output).
@@ -2042,11 +1811,6 @@ number_loop!(0, 10);
 ```
 
 This will output the numbers from 0 to 9.
-
-
-# Syntax
-
-This page is a section divider and intentionally blank.
 
 
 ## Annotations for compiler directives
@@ -2352,11 +2116,6 @@ fn main() -> std::io::Result<()> {
 ```
 
 
-# Memory
-
-This page is a section divider and intentionally blank.
-
-
 ## Memory lifetimes
 
 Rust has strict rules for memory management, which includes the concept of memory lifetimes. A memory lifetime is the duration for which a particular piece of memory is valid and can be accessed. Lifetimes can be defined in function signatures, struct definitions, and other code constructs. The borrow checker enforces rules around memory lifetimes, to ensure that memory is accessed safely and without any undefined behavior.
@@ -2462,21 +2221,6 @@ fn main() {
 ```
 
 Here, `x` is a pointer to a value of 5 that is stored on the heap. The `Box::new()` function allocates memory on the heap and returns a pointer to the allocated memory. The `println!()` macro prints the value of `x`.
-
-
-## Memory ownership and borrowing
-
-Rust uses a unique system for managing memory called "ownership". Ownership is a key concept in Rust, which helps ensure memory safety and prevents many common programming errors such as null pointer dereferencing, use-after-free, and data races.
-
-In Rust, each value has an owner, which is responsible for managing the memory associated with that value. When a value is created, its ownership is assigned to the variable that holds it. Ownership can then be transferred to another variable, passed as a function argument, or returned from a function. When the variable that owns a value goes out of scope, the value is automatically deallocated.
-
-This ownership model allows Rust to guarantee memory safety at compile-time, without the need for a garbage collector or manual memory management. It does so by enforcing a set of rules that ensure that each value is owned by only one variable at a time, that ownership can be transferred but not shared, and that every value is deallocated exactly once when it goes out of scope.
-
-In addition to ownership, Rust also provides a mechanism for borrowing, which allows multiple variables to have temporary access to a value without taking ownership of it. This allows for efficient and flexible memory management, while still ensuring that memory safety is maintained.
-
-Memory ownership and borrowing are important concepts in Rust, and they help ensure that Rust code is both efficient and safe. By carefully managing memory ownership and borrowing, Rust programmers can write code that is fast, reliable, and secure.
-
-Overall, Rust's memory ownership model provides a powerful and safe way to manage memory in a concurrent and parallel programming environment.
 
 
 ## Memory ownership - example
@@ -2601,11 +2345,6 @@ impl Foo {
     }
 }
 ```
-
-
-# Testing
-
-This page is a section divider and intentionally blank.
 
 
 ## Test framework
@@ -2832,194 +2571,11 @@ RUSTFLAGS="-C instrument-coverage" cargo test --tests
 After the tests run, there are a variety of ways to use the output files and view the coverage reports. The steps are detailed, so please see the link above for specifics.
 
 
-## Test-driven development (TDD)
 
-Test-driven development (TDD) is a software development approach where tests are written before the code that will be tested. The goal of TDD is to create higher quality, more maintainable code by ensuring that code is written to pass tests that validate the intended behavior.
 
-In Rust, TDD involves creating tests that ensure that the code functions correctly and provides the expected output. Here are the steps involved in Rust TDD:
 
-* Write a failing test: The first step is to write a test that validates the intended behavior of the code. This test should fail, indicating that the code does not yet meet the desired behavior.
 
-* Write the simplest code possible to pass the test: After writing the failing test, write the simplest code possible to make the test pass. This code should be written with the goal of passing the test, not creating a complete solution.
 
-* Refactor the code: After the test passes, refactor the code to improve its design and readability, while still ensuring that the test continues to pass.
-
-* Repeat the process: Continue this process of writing failing tests, writing the simplest code possible to pass the test, and refactoring the code until the code meets the desired behavior.
-
-In Rust, TDD can be implemented using Rust's built-in testing framework. This framework allows developers to write tests using Rust's macro syntax and provides a set of assertions that can be used to validate the output of the code being tested.
-
-By following the TDD approach in Rust, developers can create code that is reliable, maintainable, and easier to understand, while also reducing the number of bugs and issues that arise during development.
-
-## Test-driven development - example
-
-For this test-driven development example, imagine you want to write a function `foo` that always returns `true`.
-
-First write a test:
-
-```rust
-#[cfg(test)]           // Annotation: the mod is for cargo test
-mod tests {            // Define a module named "tests"
-    use super::*;      // Use code from the outer module
-
-    #[test]            // Annotation: this function is a test
-    fn foo_test() {    // Define a function as usual
-      assert!(foo());  // The assert! test macro must be true
-    }
-
-}
-```
-
-Verify the test failure:
-
-```sh
-cargo test
-```
-
-Write the simplest code possible to pass the test:
-
-```rust
-pub fn foo() -> bool { // Define a function
-    true // Always return true
-}
-```
-
-Verify the test success:
-
-```sh
-cargo test
-```
-
-Rust has built-in test assertion macros such as `assert`, `assert_eq`, `assert_ne`. In practice, these are fine for simple TDD, but may be too basic for real-world TDD. In our real-world projects, we use the Assertables crate that provides many more assertions such as `assert_starts_with`, `assert_contains`, and `assert_is_match`.
-
-<https://crates.io/crates/assertables>
-
-
-# Examples
-
-This page is a section divider and intentionally blank.
-
-
-## Access a database with rusqlite
-
-Rust example to connect to a SQLite database and execute SQL queries, by using the `rusqlite` crate:
-
-```rust
-use rusqlite::{Connection, Result};
-
-fn main() -> Result<()> {
-    let conn = Connection::open(":memory:")?;
-    conn.execute(
-        "CREATE TABLE person (
-            id    INTEGER PRIMARY KEY,
-            name  TEXT NOT NULL,
-            age   INTEGER NOT NULL
-        )",
-        [],
-    )?;
-    conn.execute(
-        "INSERT INTO person (id, name, age) VALUES (?1, ?2, ?3)",
-        ["1", "Alice", "30"],
-    )?;
-    let name: String = conn.query_row(
-        "SELECT name FROM person WHERE id=1",
-        [],
-        |row| row.get(0),
-    )?;
-    println!("{}", name);
-    Ok(())
-}
-```
-
-This example creates a `Connection` to a SQLite database in memory, creates a table named "people", inserts data into it, selects data from it, and prints it out. The `rusqlite` crate provides many more SQL features, such as transactions and prepared statements.
-
-
-## Benchmark times with Bencher
-
-Benchmarking is the process of measuring the performance of code by running it multiple times under different conditions to identify areas where improvement can be made. It is an essential process for optimizing Rust code for faster execution and better resource utilization.
-
-To conduct Rust benchmarking, the following steps are usually taken:
-
-1. Identify the code or function to be benchmarked
-
-2. Write a benchmarking harness to execute the code multiple times and record metrics such as execution time and memory usage.
-
-3. Run the benchmark multiple times to obtain a baseline performance metric
-
-4. Identify areas of improvement in the code and make changes to optimize its performance
-
-5. Repeat the benchmarking process after making modifications to gauge the impact on performance.
-
-A typical way is:
-
-1. Create a top-level folder named `benches`.
-
-2. Create a typical Rust file with your own function.
-
-4. Annotate the function with the `#[bench]` attribute.
-
-Rust provides built-in support for benchmarking through its libtest framework, and the function annotation `[#bench]`.
-
-As of this writing (2023-03-23) the Rust nightly channel has benchmarking as a feature, whereas the Rust stable channel does not. See below for troubleshooing information about this.
-
-For simple benchmarks, you can use the Bencher crate, which is a simple Rust-stable-compatible benchmark runner. For real-world projects, we suggest the Criterion crate, which is newer, more popular with current Rust teams, and provides more capabilties.
-
-
-## Benchmark times - example
-
-Edit file `Cargo.toml`, and add a dependency and configuration:
-
-```toml
-[dev-dependencies]
-bencher = "*"
-
-[[bench]]
-name = "example"
-harness = false
-```
-
-Create a project top-level directory `benches` then edit file `benches/example.rs`:
-
-```rust
-#[macro_use]
-extern crate bencher;
-use bencher::Bencher;
-
-fn a(bench: &mut Bencher) {
-    bench.iter(|| {
-        (0..1000).fold(0, |x, y| x + y)
-    })
-}
-
-fn b(bench: &mut Bencher) {
-    const N: usize = 1024;
-    bench.iter(|| {
-        vec![0u8; N]
-    });
-    bench.bytes = N as u64;
-}
-
-benchmark_group!(benches, a, b);
-benchmark_main!(benches);
-```
-
-Run `cargo bench` and you should see output such as:
-
-```text
-running 2 tests
-test a ... bench:           0 ns/iter (+/- 0)
-test b ... bench:          31 ns/iter (+/- 1) = 33032 MB/s
-```
-
-
-## Liskov substitution principle (LSP)
-
-The Liskov substitution principle (LSP) is a fundamental principle of the object-oriented programming paradigm, and it states that any instance of a class must be replaceable with an instance of its derived classes without affecting the correctness of the program.
-
-In the context of Rust, this principle can be seen in action through the use of trait objects. A trait in Rust is similar to an interface in other programming languages, and it defines a set of methods that a type must implement. A trait object, on the other hand, is a value that can hold any type that implements the trait.
-
-Using trait objects in Rust ensures that the Liskov substitution principle is upheld. Since any type that implements the trait can be used interchangeably, it becomes easier to modify, extend, and re-use code. This approach also enhances the flexibility of Rust's type system since it makes it possible to store a collection of different types that share a common trait.
-
-Overall, Rust's use of trait objects promotes a secure and robust codebase by guaranteeing at compile-time that any substitution of instances within classes is well-suited to run the program correctly.
 
 
 
@@ -3055,253 +2611,20 @@ fn main() {
 This defines a struct `Circle` and implements the `Drawable` trait. The `draw_anything` function takes any object that implements the `Drawable` interface, which means that it can accept circles or anything else that implements `Drawable`. interface. The function is an example of Liskov substitution principle in action, because any `Drawable` can be given   .
 
 
-## List directories recursively with walkdir
 
-Rust example code to list directories recursively with the walkdir crate.
 
-Example:
 
-```rust
-use walkdir::WalkDir;
 
-fn main() {
-    let path = "/usr";
-    for entry in WalkDir::new(path)
-    .max_depth(3)
-    .into_iter()
-    .filter_map(|e| e.ok()) {
-        if entry.file_type().is_dir() {
-            println!("Directory: {}", entry.path().display());
-        } else {
-            println!("File: {}", entry.path().display());
-        }
-    }
-}
-```
 
-The example function does these steps:
 
-1. Start at the system directory path "/usr".
 
-2. Create a WalkDir object. Limit the walk to maximum depth of 3 directories. Use an iterator. Filter-map the results to be entries that are ok.
 
-3. For each entry, see if it's a directory or file, and print its path, such as "Directory: /usr/bin" or "File: /usr/bin/true", etc.
 
 
-## Make HTTP request with reqwest
 
-Rust example code to make an HTTP GET request to a URL and print the response body, with the `reqwest` crate.
 
-In the file `Cargo.toml`, add `reqwest` and `tokio` for async functions:
 
-```toml
-[dependencies]
-reqwest = "*"
-tokio = { version = "*", features = ["full"] }
-```
 
-`main.rs`:
-
-```rust
-use reqwest::Error;
-
-async fn fetch(url: &str) -> Result<String, Error> {
-    let response = reqwest::get(url).await?;
-    let body = response.text().await?;
-    Ok(body)
-}
-
-#[tokio::main]
-async fn main() -> Result<(), Error> {
-    let url = "https://www.example.com";
-    let response_body = fetch(url).await?;
-    println!("{}", response_body);
-    Ok(())
-}
-```
-
-This code defines an asynchronous function `fetch` that takes a URL as input and returns a Result containing the response body as a `String` if the request succeeds. The function uses the `reqwest::get` function to make an HTTP GET request to the specified URL, and then uses the text method of the response object to extract the response body as a string.
-
-In the main function, we call `fetch` with a URL and then print the response body to the console. Note that this code assumes that the URL is valid and that the server responds with a successful HTTP status code. Also, we use `#[tokio::main]` attribute to execute our async main function, as we are using `async-await` in our `fetch` function.
-
-
-## Memoize a function with cached
-
-The phrase "memoize a function" means "create a cache of the function's inputs and outputs". This is called memoizaiton, and can significantly speed up some functions, especially ones that do large calculations, or ones that do recursive calculations.
-
-An easy way to memoize a function is to use the Rust `cached` crate. 
-
-Example:
-
-```rust
-use cached::proc_macro::cached;
-
-#[cached]
-fn fibonacci(n: usize) -> usize {
-    if n == 0 || n == 1 { return n }
-    fibonacci(n-1) + fibonacci(n-2)
-}
-```
-
-The example defines a function named `fibonacci`. The Fibonacci sequence is a mathematical sequence in which each number is the sum of the two preceding ones: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, etc. For example, index number `0` is the sequence term `0`, and index number `12` is the  sequence term `144`. 
-
-The `fibonacci` function takes an input which is a Fibonacci sequence index number, and returns the Fibonacci sequence term number. For example, input index `0` returns term `0`, and input index  `12` returns term `144`.
-
-By default, the function's memoizaiton cache will be the function's name in all caps i.e. `FIBONACCI`.
-
-
-## Parallelism with rayon
-
-Rust has built-in support for parallelism, which is the ability to execute multiple tasks simultaneously on multiple processors or cores.
-
-Rust's support for parallelism is especially easy to use by adding the Rust `rayon` crate, which provides a high-level API for parallel programming. The `rayon` crate allows developers to easily parallelize data processing tasks, such as iterating over large collections, by abstracting away the low-level details of thread creation and synchronization.
-
-Here is an example code snippet that demonstrates Rust parallelism using rayon:
-
-```rust
-use rayon::prelude::*;
-
-fn main() {
-    let numbers = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    let sum = numbers.par_iter().sum::<i32>();
-    println!("Sum is {}", sum);
-}
-```
-
-In this example, the `par_iter()` method creates a parallel iterator over a vector of numbers. The `sum()` method is then called on the iterator to calculate the sum of all the numbers in the vector.
-
-`rayon` automatically divides the work among multiple threads, using as many threads as there are processors or cores available on the system. The code is executed in parallel, with each thread processing a subset of the data.
-
-The `par_iter()` method can be used with many other methods of the standard library, such as `map()`, `filter()`, and `reduce()`, to parallelize various data processing tasks.
-
-
-## Parse JSON data with Serde
-
-Example code to parse JSON data, by using the `serde_json` crate.
-
-```rust
-use serde_json::{Result, Value};
-
-fn parse_json(json_string: &str) -> Result<Value> {
-    let json: Value = serde_json::from_str(json_string)?;
-    Ok(json)
-}
-
-fn main() {
-    let json_string = r#"
-        {
-            "name": "John Doe",
-            "speaks": ["English", "Mandarin"]
-        }
-    "#;
-
-    let parsed_json = parse_json(json_string).unwrap();
-    let name = parsed_json["name"].as_str().unwrap();
-    let languages = parsed_json["speaks"].as_array().unwrap();
-    println!("Name: {}", name);
-    println!("Speaks: {:?}", languages);
-}
-```
-
-This code defines a function `parse_json` that takes a JSON string and returns a `serde_json::Value` object. The `serde_json::from_str` function parses the JSON string into a `Value` object. The main function demonstrates how to access the values in the parsed JSON by using the `as_*` methods on the `Value` object. In this example, we access the `name`, `age`, and `speaks` fields of the JSON object and print them to the console. This code assumes that the JSON is well-formed, and matches the expected schema.
-
-
-## Read a spreadsheet with CSV
-
-Rust example code to read CSV file, by using the `csv` crate:
-
-```rust
-use std::error::Error;
-use std::fs::File;
-use std::io::prelude::*;
-use csv::ReaderBuilder;
-
-fn main() -> Result<(), Box<dyn Error>> {
-    let file_path = "data.csv";
-    let mut file = File::open(file_path)?;
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)?;
-
-    let mut reader = ReaderBuilder::new()
-        .has_headers(true)
-        .delimiter(b',')
-        .from_reader(contents.as_bytes());
-
-    for result in reader.records() {
-        let record = result?;
-        println!("{:?}", record);
-    }
-
-    Ok(())
-}
-```
-
-This code reads a CSV file located at `data.csv`, reads its contents into a string, and then uses the `csv` crate's `Reader` to parse the CSV data. The `has_headers` method specifies that the CSV file contains a header row, and the delimiter method specifies that the field separator is a comma.
-
-The for loop iterates over each record in the CSV file and prints it to the console. Each record is represented as a `csv::StringRecord`, which can be indexed or iterated over to access individual fields. The `?` operator is used throughout the code to handle errors that may occur during file I/O or CSV parsing.
-
-
-## Run a terminal program with cursive
-
-Run a simple interactive terminal user interface program, by using the `cursive` crate.
-
-```rust
-use cursive::{Cursive, CursiveExt};
-use cursive::views::{Dialog, TextView};
-
-fn main() {
-    let mut siv = Cursive::default();
-
-    siv.add_layer(
-        Dialog::around(TextView::new("Hello, World!"))
-            .title("Cursive Example")
-            .button("Quit", |s| s.quit()),
-    );
-
-    siv.run();
-    println!("Ok")
-}
-```
-
-This code creates a `Cursive` object, adds a `TextView` containing the message "Hello, World!" to a `Dialog`, and then displays the dialog with a "Quit" button that will close the application when clicked.
-
-Add the `cursive` crate dependency to the `Cargo.toml` file, then you can run this code using `cargo run`.
-
-## Search text file lines with regex
-
-Example to search text file lines by using the `regex` crate for regular expression pattern matching.
-
-```rust
-use std::fs::File;
-use std::io::{self, BufRead};
-use regex::Regex;
-
-fn main() {
-    // Regular expression: word break + letters "in" + word break
-    let regex = Regex::new(r"\bin\b").expect("regex");
-
-    // Open an existing file and prepare to read its lines
-    let file = File::open("example.txt").expect("file");
-    let lines = io::BufReader::new(file).lines();
-
-    // For each line, try the regex; if it matches, then print the line.
-    for line in lines {
-        if let Ok(string) = line {
-            if regex.is_match(&string) {
-                println!("match: {}", string);
-            }
-        }
-    }
-}
-```
-
-The example opens a text file, then reads each line. The example loop tries the regex `is_match` method on each line's string. If the string matches, then the function prints it.
-
-
-
-# Tooling we use often
-
-This page is a section divider and intentionally blank.
 
 
 ## rustup command-line tool
@@ -3464,39 +2787,6 @@ Key benefits:
 * Modern features such as fuzzy finder to jump to files and symbols, project wide search, beautiful themes, auto closing bracket pairs, surround integration and more.
 
 
-## Rustfmt for code formatting
-
-Rustfmt is a code formatting tool for Rust programming language. It automatically reformats Rust code according to a set of predefined formatting rules, which helps developers to maintain consistent coding styles and makes it easier to read, understand and debug the code.
-
-Rustfmt can be used as a standalone tool, or as an integrated feature within a code editor, or via a build script. It supports formatting options, including indentation style, line wrapping, brace styles, and more.
-
-Using Rustfmt is highly recommended by the Rust community as it helps maintain a consistent coding style across a project, which in turn makes the code easier to read, maintain and understand.
-
-To use Rustfmt, you first need to install it on your system. Rustfmt can be installed using Cargo, the package manager for Rust, by running the following command in your terminal:
-
-```sh
-cargo install rustfmt
-```
-
-You can customize the formatting rules used by Rustfmt by creating a configuration file named `rustfmt.toml` or `.rustfmt.toml` in your project directory and specifying your preferred options.
-
-Example `rustfmt.toml` file:
-
-```toml
-comment_width = 80
-format_code_in_doc_comments = true
-group_imports = "StdExternalCrate"
-imports_granularity = "Crate"
-imports_layout = "Vertical"
-indent_style = "Block"
-reorder_imports = false
-wrap_comments = true
-```
-
-Overall, Rustfmt is a good tool to reformat code for consistent styles.
-
-
-
 ## Rustfmt - examples
 
 ### Rustfmt as a standalone tool
@@ -3606,11 +2896,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 In this example, the Rhai script evaluates arithmetic expressions, and Rust performs the actual calculations. This combines Rhai's dynamic code and Rust's strong typing and optimized performance.
 
 
-# Tooling concepts
-
-This page is a section divider and intentionally blank.
-
-
 ## Abstract syntax tree (AST)
 
 An abstract syntax tree (AST) is a data structure used in computer science to represent the structure of a program in a way that can be easily analyzed and manipulated by algorithms.
@@ -3683,61 +2968,6 @@ Rust's static analysis features include:
 * Clippy: Clippy is a community-maintained linter for Rust that provides additional static analysis checks beyond what the compiler itself does. Clippy checks for common coding mistakes, such as unused variables, and provides suggestions for how to fix them.
 
 Overall, Rust's strong focus on static analysis helps catch many errors before they occur, reducing the likelihood of bugs and making it easier to write safe and reliable code.
-
-
-## Debugger for diagnostics
-
-A debugger is a software tool that allows developers to pause a program's execution at specific points in its code to examine its internal state and debug any issues.
-
-Debuggers can be run either from the command line or through an integrated development environment (IDE).
-
-Debuggers allow developers to step through code line by line, set breakpoints, and inspect variables and memory at runtime.
-
-Rust's built-in debugger is called GDB (GNU Debugger), and it's available on most platforms.
-
-Additionally, there are also third-party Rust debugging tools like Rust-GDB and Rust-LLLD, which offer specialized features like improved integration with Rust development environments, better support for multi-threaded applications, and more:
-
-* Rust-GDB: an implementation of GNU Debugger (GDB) that is customized specifically for debugging Rust programs.
-
-* Rust-LLDB: a debugger that allows developers to analyze and debug Rust programs using the LLVM debugger (LLDB) tool.
-
-
-
-## Debugger for diagnostics - example
-
-To use a debugger for diagnostics, you can use Rust's built-in debugger, which called GDB (GNU Debugger).
-
-Activate debug symbols. GDB requires debug symbols to provide human-readable information about the code, such as function and variable names, file names, and line numbers. To enable debug symbols in a release, you can add the following lines to their Cargo.toml file:
-
-```toml
-[profile.release]
-debug = true
-```
-
-Build the program with debugging information. You can then build their Rust code with the debug option.
-
-```sh
-cargo build --bin my_program --release
-```
-
-Start GDB by typing `gdb my_program` in the terminal (where my_program is the name of the executable file).
-
-Load the executable by using the command `file my_program` to load your program into GDB.
-
-Set breakpoints. You can place breakpoints in your Rust code using the `break` command. For instance, to stop the program when reaching line 10 of the file `main.rs`, you can type `break main.rs:10`.
-
-Run the program. You can execute the program by typing `run`. The execution will pause at the first breakpoint, if there is one.
-
-Inspect variables. You can use the `print` command to check the value of a variable at a specific point in the code. For example, `print x`.
-
-Use backtrace. You can use the `bt` command to print a backtrace of the stack, which shows the sequence of function calls that led to the current state of the program.
-
-Continue execution of the program by using the command `continue`.
-
-
-# Design patterns
-
-This page is a section divider and intentionally blank.
 
 
 ## Design patterns: introduction
@@ -3889,736 +3119,36 @@ impl Singleton {
 ```
 
 
-# Crates we like for many of our programs
 
-This page is a section divider and intentionally blank.
 
 
-## Assertables crate for assert macro tests
 
-<https://crates.io/crates/assertables>
 
-The Rust Assertables crate is a library of assert macros for testing, validation, and verification. If an assert macro succeeds, then it completes normally, otherwise it prints a diagnostic error message.
 
-Edit your file `Cargo.toml`:
 
-```toml
-[dependencies]
-assertables = "7"
-```
 
-Example of how to use the Assertables crate:
 
-```rust
-#[cfg(test)]
-mod test_assert_x_result {
-    use assertables;
 
-    #[test]
-    fn example1() {
-        let x = 1;
-        let y = 2;
-        assert_lt!(x, y);
-    }
 
-    #[test]
-    fn example2() {
-        let string1 = "Hello World";
-        let string2 = "He";
-        assert_starts_with!(string1, string2);
-    }
-}
-```
 
-In the example, the macro `assert_lt!` tests that `x` is less than `y`, and the macro `assert_starts_with!` tests that `string1` starts with `string2`.
 
-The Assertable crate provides a range of macros for compile-time testing, as well as debug macros for non-optimized runtime debugging, and runtime macros for optimized runtime validation and verification.
 
 
-## cached crate for memoization
 
-The Rust `cached` crate provides implementations of several caching structures as well as macros for defining memoized functions.
 
-Example to cache a function's input and output:
 
-```rust
-use cached::proc_macro::cached;
 
-/// Defines a function named `fib` that uses cached.
-/// By default, the cache name will be the function's
-/// name in all caps; this cache name is "FIBONACCI".
-#[cached]
-fn fiboncacci(n: u64) -> u64 {
-    if n == 0 || n == 1 { return n }
-    fiboncacci(n-1) + fiboncacci(n-2)
-}
-```
 
-Example to cache a function call for a time period:
 
-```rust
-use cached::proc_macro::once;
 
-/// Only cache the initial function call.
-/// Function will be re-executed after the cache
-/// expires (according to `time` seconds).
-/// When no (or expired) cache, concurrent calls
-/// will synchronize (`sync_writes`) so the function
-/// is only executed once.
-#[once(time=10, option = true, sync_writes = true)]
-fn keyed(a: String) -> Option<usize> {
-    if a == "a" {
-        Some(a.len())
-    } else {
-        None
-    }
-}
-```
 
 
-## log crate for logging messages
 
-<https://crates.io/crates/log>
 
-The Rust log crate provides a logging framework for Rust programs. The log crate provides a simple interface for logging messages at different levels of severity, such as info, warn, error, and debug.
 
-To use the log crate, you need to first define a logger implementation. This implementation defines how the log messages are recorded and where they are sent. There are many different logger implementations available in the Rust ecosystem, such as simple_logger, env_logger, log4rs, fern, and syslog.
 
-Example file `Cargo.toml` with `log` and `simple_logger`:
 
-```toml
-[dependencies]
-log = "*"
-simple_logger = "*"
-```
 
-Example:
-
-```rust
-use log::{info, warn, error, debug};
-use simple_logger::SimpleLogger;
-
-fn main() {
-    SimpleLogger::new().env().init().unwrap();
-    info!("Example info messsage");
-    warn!("Example warn message");
-    error!("Example errror message");
-    debug!("Example debug message");
-}
-```
-
-The log crate also allows you to configure the logging behavior at runtime by setting the log level and enabling or disabling specific loggers. This can be useful for debugging and troubleshooting purposes.
-
-The log crate also provides macros and functions for working with log messages, such as for formatting and recording the runtime file name and line number.
-
-
-
-## itertools crate for iterator extras
-
-<https://crates.io/crates/itertools>
-
-The Rust itertools crate is a third-party library that provides a powerful set of tools for working with iterators in Rust. It offers a wide range of functions and macros for manipulating and combining iterators, making it easier and more efficient to work with collections of data in Rust.
-
-The itertools crate provides:
-
-* iteration functions that can be used to manipulate and transform iterators
-
-* combinator functions that can be used to generate new iterators from existing iterators
-
-* macros that can be used to simplify the code required to work with iterators
-
-Example:
-
-```rust
-use itertools::{Itertools, join};
-
-fn main() {
-    // Demo data
-    let numbers = vec![1, 2, 3];
-    let letters = vec!['a', 'b', 'c'];
-
-    // Use the "join" macro to flatten lists into one string
-    let joined = join(letters, ", ");
-    println!("{:?}", joined);
-
-    // Use the combinator functions to mix iterators
-    for (n, l) in numbers.iter()
-        .cartesian_product(letters.iter()) {
-        println!("{}{}", n, l);
-    }
-}
-```
-
-
-## num crate for number types and traits
-
-The Rust `num` crate is a collection of numeric types and traits for Rust. This includes new types for big integers, rationals (aka fractions), and complex numbers, new traits for generic programming on numeric properties like Integer, and generic range iterators.
-
-Example of the `PrimInt` trait for primitive integers, which helps with generic traits and monomorphism:
-
-```
-pub trait FizzBuzz {
-    fn fizzbuzz(&self) -> String;
-}
-
-impl<T> FizzBuzz for T
-where 
-    T: num::traits::int::PrimInt,
-    T: std::fmt::Display,
-{
-    fn fizzbuzz(&self) -> String {
-        let t0 = T::zero();
-        let t3 = T::from(3).unwrap();
-        let t5 = T::from(5).unwrap();
-        match (*self % t3 == t0, *self % t5 == t0) {
-            (true, true) => String::from("FizzBuzz"),
-            (true, _) => String::from("Fizz"),
-            (_, true) => String::from("Buzz"),
-            _ => format!("{}", self),
-        }
-    }
-}
-
-fn main() {
-    for i in 1..=100 {
-        println!("{}", i.fizzbuzz())
-    }
-}
-```
-
-
-## once_cell crate for lazy global variables
-
-<https://crates.io/crates/once_cell>
-
-The Rust once_cell crate provides a way to create lazily evaluated, immutable, and thread-safe global variables in Rust. It is designed to provide a simple and efficient way to handle global state in Rust programs.
-
-The main type provided by the once_cell crate is the OnceCell<T> type. This type is a container for a single value of type T that can be initialized lazily and only once. When the value is accessed for the first time, it is created using a closure that is passed to the OnceCell's get_or_init method. The closure is executed only once, and the resulting value is stored in the OnceCell for future accesses.
-
-The OnceCell type is also thread-safe, which means that multiple threads can access the same OnceCell instance safely. If multiple threads attempt to access the OnceCell at the same time, only one of them will be allowed to execute the initialization closure, while the other threads will block until the value is fully initialized.
-
-The OnceCell crate also provides other useful types, such as the unsync::OnceCell<T> type, which is similar to the regular OnceCell<T> but is not thread-safe, and the sync::Lazy<T> type, which is similar to the OnceCell<T> but provides an additional level of indirection that allows for even more efficient initialization and access.
-
-Example of once_cell `Lazy` to intialize a `Regex` regular expression:
-
-```rust
-use regex::Regex;
-use once_cell::sync::Lazy;
-
-fn main() {
-    static RE: Lazy<Regex> =
-        Lazy::new(|| Regex::new("hello").unwrap());
-    let matched = RE.is_match("hello world");
-    println!("{}", matched);
-}
-```
-
-
-## syn crate for syntax analysis
-
-<https://crates.io/crates/syn>
-
-The Rust `syn` crate is a library that enables parsing, analyzing, and processing of Rust source code syntax. It is designed to allow developers to build tools like code generators, linters, and syntax highlighters.
-
-The `syn` crate provides an abstract syntax tree (AST) of Rust code, which represents the structure and meaning of the code without including all the details and syntax of the source code. This makes it easier for developers to work with Rust code programmatically, as they do not need to parse and analyze the code manually.
-
-The `syn` crate also provides support for parsing Rust code in different contexts, such as macros, attributes, and expressions, making it a versatile tool for Rust developers.
-
-Example of a derive macro:
-
-```rust
-use proc_macro::TokenStream;
-use quote::quote;
-use syn::{parse_macro_input, DeriveInput};
-
-#[proc_macro_derive(MyMacro)]
-pub fn my_macro(input: TokenStream) -> TokenStream {
-    // Parse the input tokens into a syntax tree
-    let input = parse_macro_input!(input as DeriveInput);
-
-    // Build the output, possibly using quasi-quotation
-    let expanded = quote! {
-        // ...
-    };
-
-    // Hand the output tokens back to the compiler
-    TokenStream::from(expanded)
-}
-```
-
-
-## regex crate for regular expressions
-
-<https://crates.io/crates/regex>
-
-The Rust regex crate is a regular expression library for the Rust programming language. It provides a fast and efficient way to search, match, and manipulate text using regular expressions.
-
-The main types provided by the regex crate are the `Regex` and `Captures` types. The `Regex` type represents a compiled regular expression pattern that can be used to search for matches in a text string. The `Captures` type represents the groups captured by a successful match and allows for easy extraction of matched substrings.
-
-The regex crate supports a wide range of regular expression syntax, including Perl-style regular expressions and POSIX extended regular expressions. It also supports Unicode character properties and provides a range of Unicode-aware matchers and modifiers.
-
-The regex crate is highly performant and is designed to handle large inputs efficiently. It provides a range of options for controlling the matching behavior, such as case-insensitive matching, multi-line matching, and greedy or lazy quantifiers.
-
-Example:
-
-```rust
-use regex::Regex;
-
-fn main() {
-    // Find the first occurance of a digit char and word char
-    let r = Regex::new(r"(\d)(\w)").unwrap();
-    let captures = r.captures("a1b2c3").unwrap();
-    println!("{:?}", captures)
-}
-```
-
-Output:
-
-```txt
-Captures({0: Some("1b"), 1: Some("1"), 2: Some("b")})
-```
-
-
-## Serde crate for serialize/deserialize
-
-<https://crates.io/crates/serde>
-
-The Rust Serde crate is a widely used library for serialization and deserialization of Rust data structures to and from various data formats, such as JSON, TOML, YAML, and many others.
-
-The Serde `derive` feature can automatically derive the serialization and deserialization code for Rust data structures, such as:
-
-```rust
-use serde::{Serialize, Deserialize};
-
-#[derive(Serialize, Deserialize)]
-struct Person {
-    name: String,
-    age: u32,
-}
-```
-
-This defines a `Person` struct with two fields: `name` is a `String`, and `age` is a `u32`. The `#[derive(Serialize, Deserialize)]` attribute tells Serde to automatically generate the serialization and deserialization code for this struct.
-
-You can then use Serde to serialize an instance of this struct to JSON:
-
-```rust
-let person = Person { name: "Alice".to_string(), age: 30 };
-let json = serde_json::to_string(&person).unwrap();
-```
-
-This creates a `Person` instance and serializes it to JSON using the `serde_json::to_string` function. The `&person` argument is a reference to the `Person` instance that you want to serialize.
-
-You can also deserialize a JSON string into a Person instance:
-
-```rust
-let json = r#"{"name":"Bob","age":25}"#;
-let person: Person = serde_json::from_str(json).unwrap();
-```
-
-This deserializes the json string into a `Person` instance using the `serde_json::from_str` function.
-
-
-## Strum crate for enums
-
-The Rust Strum crate provides macros for working with enums. The crate provides several useful macros that can be used to derive implementations for various traits on enums.
-
-* EnumString - Derives the ability to parse strings into enum variants using the FromStr trait.
-
-* EnumVariantNames - Derives a method that returns a list of the enum's variant names as strings.
-
-* Display - Derives the ability to convert enum variants to strings using the Display trait.
-
-* AsRefStr - Derives the ability to convert enum variants to string slices using the AsRef trait.
-
-Example:
-
-```rust
-use strum_macros::EnumString;
-
-#[derive(Debug, EnumString)]
-enum Color {
-    Red,
-    Green,
-    Blue,
-}
-
-fn main() {
-    let color = "Red".parse::<Color>().unwrap();
-    println!("{:?}", color);
-}
-```
-
-This example uses the `EnumString` macro to derive the `FromStr` trait for the `Color` enum. This enables us to parse the string "Red". The `unwrap()` method handles any parse errors.
-
-
-## rand crate for random numbers
-
-The Rust `rand` crate is a library that provides various random number generators (RNGs), algorithms, and utilities. It can generate random numbers of different types (such as integers or floating-point numbers), as well as random bytes and strings.
-
-The crate offers several algorithms for generating random numbers:
-
-* Xorshift: a fast, non-cryptographic algorithm that generates random numbers with a period of 2^128 - 1.
-
-* ChaCha: a stream cipher that can be used to generate random numbers with a very long period, suitable for cryptographic applications.
-
-* Hc128: another stream cipher that can be used for random number generation.
-
-In addition to generating random numbers, the "rand" crate also provides utilities for shuffling arrays, generating random values from enums, and more.
-
-### rand crate example
-
-```rust
-use rand::Rng;
-
-fn main() {
-    // Create a random number generator
-    let mut rng = rand::thread_rng();
-    let number = rng.gen_range(1..=100);
-    println!("{}", number);
-}
-```
-
-In this example, we use the `Rng` trait from the rand crate to generate a random number between 1 and 100. The `thread_rng()` function returns a new instance of the generator. The `gen_range()` function generates a random number in the specified range (inclusive of the lower bound and exclusive of the upper bound). We print the result to the console.
-
-# Crates we like for command line interfaces
-
-This page is a section divider and intentionally blank.
-
-
-## CLAP crate for commands
-
-<https://crates.io/crates/clap>
-
-The Rust CLAP crate is for command line argument parsing. CLAP provides a flexible and intuitive way to define command-line interfaces (CLIs) for Rust programs, with support for a wide range of features and options.
-
-Add a dependency in your file `Cargo.toml` file, along with features you want:
-
-```rust
-[dependencies]
-clap = { version = "4", features = ["derive"] }
-```
-
-Defining your CLI options by using CLAP derive `Parser`:
-
-```rust
-use clap::Parser;
-
-#[derive(Parser, Debug)]
-#[command(author, version, about, long_about = "None")]
-struct Args {
-   #[arg(short, long)]
-   name: String,
-   #[arg(short, long)]
-   age: i32,
-}
-
-fn main() {
-    let args = Args::parse();
-    println!("{:?}", args);
-}
-```
-
-Example run:
-
-```sh
-cargo run -- --name Alice --age 22
-```
-
-Example output:
-
-```sh
-Args { name: "Alice", age: 22 }
-```
-
-
-## CLAP command builder - example
-
-See code directory `/projects/crates/clap`
-
-The CLAP command builder pattern is one way set up CLAP:
-
-```rust
-use clap::{Arg, ArgAction, Command};
-
-fn main() {
-    let matches = Command::new("My Program")
-    .version("1.0.0")
-    .author("Alice Adams")
-    .about("This is my program")
-    .arg(
-        Arg::new("name")
-        .help("Set the name to use")
-        .short('n')
-        .long("name")
-        .action(ArgAction::Set)
-    )
-    .after_help("Longer explanation")
-    .get_matches();
-
-    // Process the command line arguments
-    if let Some(x) = matches.get_one::<String>("name") {
-        println!("Name is {}", x);
-    }
-}
-```
-
-The command builder defines introduction program information, then the `name` argument, then any conclusion program information. The example uses the `get_matches()` method to parse command-line arguments into a `matches` struct, then prints the `name` argument.
-
-Example run:
-
-```sh
-cargo run -- --name Alice
-```
-
-Example output:
-
-```sh
-Name is Alice
-```
-
-
-## Textwrap crate for text wrapping
-
-<https://crates.io/crates/textwrap>
-
-The Rust Textwrap crate is a library for wrapping and formatting text in Rust. It provides a simple API for wrapping text to a specified width, as well as support for indentation, alignment, and hyphenation.
-
-The Textwrap crate can be used for a variety of text formatting tasks, such as formatting text for display in a terminal, wrapping text for printing to a file, or formatting text for display in a GUI application.
-
-Some of the key features of the Textwrap crate include:
-
-* Support for wrapping text to a specified width, with options for indenting and aligning the wrapped text.
-
-* Support for hyphenation, which can improve the readability of text by breaking long words across lines.
-
-* Support for custom line breaking rules, which can be used to handle special cases such as URLs or email addresses.
-
-* A simple and easy-to-use API, with sensible defaults that make it easy to get started with text wrapping in Rust.
-
-* Support for a variety of text input and output formats, including plain text, HTML, and Markdown.
-
-Overall, the Rust Textwrap crate is a powerful tool for formatting and wrapping text in Rust. Its flexible API and support for advanced features like hyphenation and custom line breaking rules make it a great choice for developers looking to format text for a variety of applications.
-
-
-## Textwrap crate - example
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/textwrap/fill_wrap)
-
-Example of textwrap fill and wrap:
-
-```rust
-use textwrap::{fill, wrap};
-
-fn main() {
-    let s = "Rust is a great programming language for us";
-    println!("{}", fill(s, 22));
-    println!("{:?}", wrap(s, 22));
-}
-```
-
-Example output:
-
-```text
-Rust is a great
-programming language
-for us
-["Rust is a great", "programming language", "for us"]
-```
-
-In this example, we import the `fill` and `wrap` functions from the textwrap crate. 
-
-We use `fill` to fill one string with lines that are each 22 characters maximum per line. 
-
-We use `wrap` to create a vector of strings that are each 22 characters maximum per line.
-
-
-## Cursive crate for text user interfaces
-
-<https://crates.io/crates/cursive>
-
-The Rust Cursive crate is a TUI (text user interface) library for building interactive terminal applications. It allows developers to create rich terminal UIs with features such as customizable layouts, event handling, input handling, and styling.
-
-Cursive is built on top of the Rust `ncurses` library, which provides low-level terminal I/O and screen rendering. Cursive provides a higher-level API than ncurses, making it easier to build complex UIs without worrying about the details of terminal control.
-
-Some of the key features of cursive include:
-
-* A flexible layout system that allows developers to create complex, dynamic UIs with ease.
-
-* Support for a wide range of input events, including mouse input and keyboard shortcuts.
-
-* A rich set of widgets, including buttons, checkboxes, text fields, and more.
-
-* Customizable theming and styling, with support for colors, fonts, and text effects.
-
-* Support for Unicode and UTF-8 input and display.
-
-* A robust documentation and community resources.
-
-Overall, the Rust Cursive crate is a powerful tool for building interactive terminal applications in Rust. Its high-level API, flexibility, and rich feature set make it an excellent choice for developers looking to build text-based UIs with ease.
-
-
-## Cursive crate - example
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/cursive/hello_world)
-
-Run a simple interactive terminal user interface program, by using the `cursive` crate.
-
-```rust
-use cursive::{Cursive, CursiveExt};
-use cursive::views::{Dialog, TextView};
-
-fn main() {
-    let mut siv = Cursive::default();
-
-    siv.add_layer(
-        Dialog::around(TextView::new("Hello, World!"))
-            .title("Cursive Example")
-            .button("Quit", |s| s.quit()),
-    );
-
-    siv.run();
-    println!("Ok")
-}
-```
-
-This code creates a `Cursive` object, adds a `TextView` containing the message "Hello, World!" to a `Dialog`, and then displays the dialog with a "Quit" button that will close the application when clicked.
-
-
-## console, dialoguer, indicatif for CLIs
-
-<https://crates.io/crates/console>
-
-<https://crates.io/crates/dialoguer>
-
-<https://crates.io/crates/indicatif>
-
-[project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/console/hello_world)
-  
-The `console` crate provides access to terminal features so you can build nicer looking command line interfaces. 
-
-The `dialoguer` crate helps you build small user inputs for the command line, such as prompts, inputs, selections, history, and more.
-
-The `indicatif` crate helps you build command line interfaces that report progress to users. It helps format anything that indicates progress.
-
-Example:
-
-```rust
-use console::Term;
-use dialoguer::Input;
-use indicatif::ProgressBar;
-
-fn main() -> std::io::Result<()> {
-    // console example
-    let term = Term::stdout();
-    term.write_line("Hello, World!")?;
-
-    // dialoguer example
-    let input = Input::<String>::new().interact_text()?;
-    term.write_line(&input)?;
-
-    // indicatif example
-    let bar = ProgressBar::new(10);
-    for _ in 0..10 { bar.inc(1); }
-    bar.finish();
-
-    Ok(())
-}
-```
-
-
-## TUI crate for text user interfaces
-
-The Rust TUI (Text User Interface) crate provides user interface widgets and utilities for building command-line tool interfaces. The TUI crate includes components such as text input fields, progress bars, tables, and menus, which can be used to create interactive and dynamic command-line interfaces.
-
-The Rust TUI crate is built on top of the Rust ncurses library and provides an abstraction layer that simplifies the creation of user interfaces. The library is cross-platform and can be run on a variety of operating systems.
-
-Example:
-
-```rust
-use tui::Terminal;
-use tui::backend::TermionBackend;
-use termion::raw::IntoRawMode;
-
-fn main() {
-    // Create a Terminal with the TermionBackend
-    let stdout = io::stdout().into_raw_mode().unwrap();
-    let backend = TermionBackend::new(stdout);
-    let mut terminal = Terminal::new(backend).unwrap();
-
-    // Draw the UI
-    terminal.draw(|f| {
-        let size = f.size();
-        let block = Block::default()
-            .title("Block")
-            .borders(Borders::ALL);
-        f.render_widget(block, size);
-    }).unwrap();
-}
-```
-
-This code creates a new Terminal with TermionBackend and draws a simple block on it.
-
-## tui crate - examples
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/tui/terminal_draw_block)
-
-Example to draw a block on the screen:
-
-```
-use tui::Terminal;
-use tui::backend::CrosstermBackend;
-use tui::layout::Rect;
-use tui::widgets::{Borders, Block};
-use termion::raw::IntoRawMode;
-
-fn main() {
-    let stdout = std::io::stdout().into_raw_mode().unwrap();
-    let backend = CrosstermBackend::new(stdout);
-    let mut terminal = Terminal::new(backend).unwrap();
-
-    // Draw the UI
-    terminal.clear();
-    terminal.draw(|f| {
-        let size = Rect { x: 8, y: 8, width: 8, height: 8 };
-        let block = Block::default()
-            .title("Block")
-            .borders(Borders::ALL);
-        f.render_widget(block, size);
-    }).unwrap();
-}
-```
-
-
-## walkdir crate for traversing directories
-
-The Rust `walkdir` crate provides ways to iterate over directories and their contents. It is useful for traversing directories, such as for file managers, build systems, or search engines. It is built on top of the `std::fs` module.
-
-Key features of the `walkdir` crate include: recursive directory iteration with configurable maximum depth; filtering options based on file attributes or name patterns; error handling and recovery mechanisms for I/O errors or permission issues; configurable follow-symlinks behavior; support for custom sorting and ordering of entries; optional support for cross-platform path handling and case sensitivity.
-
-Example of how to use the walkdir crate:
-
-```rust
-use walkdir::WalkDir;
-
-fn main() {
-    for entry in WalkDir::new("/path/to/directory")
-    .into_iter()
-    .filter_map(|e| e.ok()) {
-        if entry.file_type().is_dir() {
-            println!("Directory: {}", entry.path().display());
-        } else {
-            println!("File: {}", entry.path().display());
-        }
-    }
-}
-```
-
-The `WalkDir::new` function creates a new directory walker, and `into_iter` returns an iterator that can be filtered and mapped over. The `ok` method filters out any errors that may occur during iteration. Then the `file_type` method on the `entry` variable checks if the entry is a directory or a file. Finally, we print out the name of the entry using the `display` method.
-
-
-# Crates we like for development
-
-This page is a section divider and intentionally blank.
 
 
 ## cargo-cache crate for caching builds
@@ -4689,31 +3219,6 @@ Another useful feature of `cargo-dist` is its support for packaging dependencies
 Finally, `cargo-dist` provides a number of options for customizing the packaging process. You can specify the format of the archive (e.g. `.tar.gz`, `.zip`, etc.), include or exclude specific files or directories, and more. This can help ensure that the distributable archive contains exactly what you want, and nothing more.
 
 
-## cargo-release crate for publishing
-
-<https://crates.io/crates/cargo-release>
-
-The Rust cargo-release crate provides a set of tools for releasing Rust crates to repositories such as crates.io. It automates many of the steps involved in releasing a new version of a crate, making it easier and more efficient to manage the release process.
-
-To use the `cargo-release` crate in your Rust project, you'll need to add it as a dependency in your `Cargo.toml` file. Once you've done that, you can configure the crate by creating a `.cargo` directory in your project root, then adding a `config.toml` file with the following contents:
-
-```toml
-[package]
-version = "0.1.0"
-
-[dependencies]
-cargo-release = { version = "0.15", features = ["procmacro"] }
-
-[release]
-## ... configure release options here ...
-```
-
-Overall, the `cargo-release` crate provides a powerful and flexible set of tools for managing the release process for Rust crates. It can help to streamline the release process, reduce the risk of errors and inconsistencies, and ensure that your crates are published to repositories like crates.io in a consistent and reliable manner.
-
-
-Features: Ensures you are in a good state for release, such as with your git branch, remote, and tree. Supports workspaces using cargo's native flags, like --workspace, --exclude and --package.  Handles cargo publish, tagging, and pushing.
-
-
 ## cargo-release crate - examples
 
 The cargo-release crate provides many features and functions, including these examples.
@@ -4743,35 +3248,6 @@ pre-release = false
 [release.steps.post]
 ## ... additional steps to perform after the release ...
 ```
-
-
-## cargo-make crate for task runners
-
-<https://crates.io/crates/cargo-make>
-
-The Rust cargo-make crate is a tool that extends the functionality of the Cargo package manager by providing a way to define complex build processes in a simple, declarative way.
-
-Here are some of the key features of the cargo-make crate:
-
-* Declarative build scripts: With cargo-make, you define your build process in a Toml configuration file, which makes it easy to understand and modify the build process.
-
-* Cross-platform support: cargo-make runs on Linux, macOS, and Windows, making it easy to maintain consistent build processes across different platforms.
-
-* Task management: You can define a set of tasks, each of which can be executed individually or as part of a larger build process.
-
-* Dependency management: cargo-make ensures that tasks are executed in the correct order based on their dependencies, which helps avoid build errors and improve build performance.
-
-* Pre and Post Hooks: cargo-make supports pre- and post-hooks, to perform actions before and after the build process, such as cleaning artifacts, setting environment variables, etc.
-
-* Plugins: cargo-make supports plugins to extend functionality, such as adding new tasks or modifying the build process.
-
-Install:
-
-```sh
-cargo install cargo-make
-```
-
-After installation, you can define your build process in a Toml configuration file named `Makefile.toml`.
 
 
 ## cargo-make crate - example
@@ -4807,28 +3283,6 @@ If you want to execute a specific task, you can use the following command:
 ```sh
 cargo make <task-name>
 ```
-
-
-## Criterion crate for benchmarks
-
-<https://crates.io/crates/criterion>
-
-The Rust Criterion crate, titled Criterion.rs, is a popular benchmarking library. It is used to measure and analyze the performance of Rust programs by running multiple iterations of a benchmark and collecting statistical data.
-
-Criterion.rs provides a simple and intuitive API for writing benchmarks, allowing developers to create and run benchmarks quickly and easily. It supports a range of benchmarking options, including measuring CPU time, wall-clock time, memory usage, and more.
-
-The crate uses statistical techniques to calculate benchmark results, which provides more accurate and reliable results than simple timing measurements. It also supports reporting and visualization of benchmark results, making it easier for developers to analyze and compare their code's performance.
-
-Features:
-
-* Statistics: Statistical analysis detects if, and by how much, performance has changed since the last benchmark run.
-
-* Charts: Uses gnuplot to generate detailed graphs of benchmark results; see the gnuplot website for installation instructions.
-
-* Stable-compatible: Benchmark your code without installing nightly Rust.
-
-Overall, Criterion.rs is an essential tool for Rust programmers who want to optimize the performance of their programs and ensure they are running efficiently.
-
 
 
 ## Criterion crate - example
@@ -4879,1128 +3333,36 @@ Found 11 outliers among 99 measurements (11.11%)
 ```
 
 
-# Crates we like for concurrency and parallelism
 
-This page is a section divider and intentionally blank.
 
 
-## Crossbeam crate for concurrency
 
-<https://crates.io/crates/crossbeam>
 
-The Rust crossbeam crate provides low-level primitives for concurrent programming, such as locks, channels, and memory fences. These primitives are useful when fine-grained synchronization is required, or when working with non-standard concurrency patterns.
 
-The crossbeam crate makes concurrent programming easier by providing:
 
-* Atomic types: such as `AtomicBool`, `AtomicI32`, and `AtomicUsize`, which can be used to perform atomic operations on shared variables without the need for locks. This allows for efficient and safe concurrent access to shared data.
 
-* Locks: such as `Mutex`, `RwLock`, and `Semaphore`, which can be used to protect shared resources from concurrent access. These locks are highly efficient and can be used in both single-threaded and multi-threaded contexts.
 
-* Channels: such as `unbounded()`, `bounded()`, and `select()`, which can be used to communicate between threads. These channels are highly efficient and can be used to implement many common concurrency patterns, such as producer-consumer and pipeline processing.
 
-* Memory fences: such as `atomic::fence()`, which can be used to enforce ordering constraints on memory accesses. This is useful when working with non-standard concurrency patterns or when fine-grained synchronization is required.
 
-Overall, the crossbeam crate provides a powerful set of low-level primitives for concurrent programming in Rust, allowing developers to build complex and efficient concurrent applications with ease.
 
-## epoll crate for event polling
 
-Epoll is a Linux kernel interface for efficient I/O event notification by allowing user-space applications to monitor multiple file descriptors or sockets for events. 
 
-Epoll works by registering a set of file descriptors with the kernel, and then waiting for events to occur on those descriptors. It uses a "polling" approach, where the application waits for the kernel to signal that events are ready, rather than actively polling the file descriptors itself.
 
-The epoll API provides three system calls:
 
-* `epoll_create`: creates a new epoll instance and returns a file descriptor that can be used to refer to it.
 
-* `epoll_ctl`: modifies the set of file descriptors that are being monitored by the epoll instance. It can be used to add or remove file descriptors from the set, or to change the events that the kernel should watch for (e.g., read, write, or error).
 
-* `epoll_wait`: waits for events to occur on the file descriptors that are being monitored by the epoll instance. It blocks until at least one event occurs, and then returns information about the file descriptor(s) that triggered the event.
 
-One of the main advantages of epoll over other I/O notification mechanisms (such as `select` and `poll`) is its ability to scale well in high-concurrency scenarios, where there are many file descriptors being monitored at once. Epoll achieves this scalability by using a "red-black" tree data structure to efficiently keep track of the set of file descriptors, rather than linearly searching through them like `select` and `poll` do.
 
-Rust is able to interact with the operating system interfaces for input-output (I/O) operations, specifically with the epoll interface and epoll crate.
 
 
-## epoll crate - example
 
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/epoll/tcp_listener)
 
-Example to create a TCP listener and register it with epoll:
 
-```rust
-use std::{net::TcpListener, os::unix::io::AsRawFd};
-use epoll::Epoll;
-use epoll::{ControlOptions, Event, Events};
 
-fn main() -> std::io::Result<()> {
-    // Create an epoll instance and a listener fd
-    let epoll = Epoll::new()?;
-    let listener = TcpListener::bind("127.0.0.1:8080")?;
-    let listener_fd = listener.as_raw_fd();
 
-    // Register the listener with epoll
-    let mut event = Event::new(
-        ControlOptions::EPOLLIN,
-        listener_fd as u64
-    );
-    epoll.ctl_add(&mut event)?;
 
-    let mut events = Events::with_capacity(128);
-    loop {
-        // Wait for events to occur
-        let num_events = epoll.wait(&mut events, -1)?;
-        for i in 0..num_events {
-            let event = events.get(i).unwrap();
-            if event.data() == listener_fd as u64 {
-                // Accept the connection
-                let (stream, _) = listener.accept()?;
-                println!("Accepted new connection");
-            }
-        }
-    }
-}
-```
 
-The code creates an epoll instance, and a TCP listener, and registers it with epoll. Then the code uses an event loop, which waits for events to occur and processes them. The code accepts incoming connections and prints a message.
 
-
-## Flume crate for channels
-
-<https://crates.io/crates/flume>
-
-The Rust Flume crate provides multi-producer, multi-consumer channels, including unbounded, bounded, and rendezvous queues.
-
-Flume is fast, flexible, and a drop-in replacement for std::sync::mpsc, with additional features like MPMC support, send timeouts/deadlines, and an ergonomic select-like interface.
-
-Example to spawn and sum:
-
-```rust
-use std::thread;
-
-fn main() {
-    println!("Spawn");
-    let (tx, rx) = flume::unbounded();
-    thread::spawn(move || {
-        (0..10).for_each(|i| {
-            tx.send(i).unwrap();
-        })
-    });
-    let received: u32 = rx.iter().sum();
-    assert_eq!((0..10).sum::<u32>(), received);
-}
-```
-
-
-## parking_lot crate for synchronization
-
-<https://crates.io/crates/parking_lot>
-
-The Rust `parking_lot` crate is a that provides synchronization primitives for Rust programs. Specifically, the crate provides a set of concurrent data structures that are designed to be faster and more efficient than the ones provided by Rust's standard library.
-
-The `parking_lot` crate includes several types of synchronization primitives, such as locks, mutexes, and semaphores. These primitives can be used to coordinate access to shared resources in a multithreaded program, ensuring that multiple threads can safely access the same data without causing data races or other synchronization issues.
-
-One of the key advantages of the `parking_lot` crate is its performance. The crate is designed to be highly optimized for multithreaded access, using techniques like spinlocking and memory barriers to minimize the overhead of synchronization operations. As a result, programs that use the `parking_lot` crate can often achieve significantly better performance than those that use the synchronization primitives provided by Rust's standard library.
-
-In addition to its performance benefits, the `parking_lot` crate is also designed to be easy to use. The crate provides a simple and consistent API for working with its various synchronization primitives, and includes extensive documentation and examples to help developers get started.
-
-Overall, the `parking_lot` crate is a valuable tool for Rust developers who need to coordinate access to shared resources in a multithreaded program. Its high performance and ease of use make it a popular choice for a wide range of applications, from low-level systems programming to high-performance web servers and beyond.
-
-
-## Rayon crate for parallelism
-
-<https://crates.io/crates/rayon>
-
-The Rust rayon crate provides a high-level API for data parallelism. It allows developers to write code that can automatically be parallelized across multiple threads, without needing to manage low-level details of thread creation and synchronization.
-
-The rayon crate provides several features that make parallelism easier:
-
-* Parallel iterators: The rayon crate provides parallel versions of many of the standard iterators in Rust, such as `map()`, `filter()`, and `fold()`. These parallel iterators allow developers to write code that can automatically be parallelized, without needing to write low-level threading code.
-
-* Parallel collections: The rayon crate provides parallel versions of several standard Rust collections, such as `Vec` and `HashMap`. These collections allow developers to work with large data sets and automatically parallelize their code, without needing to manually split the data into chunks and manage thread synchronization.
-
-* Work stealing: The rayon crate uses a work stealing algorithm to dynamically load balance the work across all available threads. This means that if one thread finishes its work early, it can automatically start working on tasks that are still pending on other threads, improving overall performance.
-
-* Crossbeam integration: The rayon crate integrates seamlessly with the `crossbeam` crate, which provides low-level primitives for concurrent programming, such as locks and channels. This allows developers to combine high-level parallelism with low-level concurrency, as needed.
-
-Overall, the `rayon` crate provides easy data parallelism in Rust, allowing developers to take advantage of modern hardware and achieve high performance in their applications without sacrificing safety and correctness.
-
-
-# Crates we like for data
-
-This page is a section divider and intentionally blank.
-
-
-## arrow-csv crate for loading CSV to Arrow
-
-<https://crates.io/crates/arrow-csv>
-
-The Rust arrow-csv crate is a library that provides support for reading and writing CSV (Comma-Separated Values) files in the Arrow data format in Rust. The Arrow format is a columnar data format that is designed to be efficient and interoperable across different programming languages and systems.
-
-The main types provided by the arrow-csv crate are the `CsvReader` and `CsvWriter` types. The `CsvReader` type represents a CSV reader that can be used to read CSV data from a file or a stream and convert it to an Arrow record batch. The `CsvWriter` type represents a CSV writer that can be used to write Arrow record batches to a CSV file or a stream. Both types support a wide range of options for controlling the CSV parsing and formatting behavior, such as delimiter, quoting, escaping, and encoding.
-
-The arrow-csv crate also provides support for schema inference, which means that it can automatically infer the data types and column names from the CSV data, making it easier to work with CSV files that do not have a predefined schema.
-
-The arrow-csv crate is highly performant and is designed to handle large CSV files efficiently. It provides a range of optimizations, such as parallel processing and memory-mapped files, to minimize memory usage and improve performance.
-
-Overall, the Rust arrow-csv crate is a powerful and efficient library that provides a way to work with CSV data in the Arrow data format in Rust. It is widely used in a variety of applications, including data analysis, data processing, and data exchange.
-
-
-## CSV crate for comma-separated values
-
-<https://crates.io/crates/csv>
-
-The Rust CSV crate is a library for reading and writing Comma-Separated Values files. The crate provides a fast and efficient way to work with CSV data, and supports a wide range of formats and options.
-
-The main types provided by the CSV crate are the `Reader` and `Writer` types. The `Reader` type represents a CSV reader that can be used to read CSV data from a file or a stream. The `Writer` type represents a CSV writer that can be used to write CSV data to a file or a stream. Both types support a wide range of options for controlling the CSV parsing and formatting behavior, such as delimiter, quoting, escaping, and encoding.
-
-The CSV crate also provides a range of other useful types and functions, such as the `ByteRecord` type for representing CSV records as byte arrays, the `StringRecord` type for representing CSV records as UTF-8 strings, and the Serde integration for easy serialization and deserialization of CSV data.
-
-The CSV crate is highly performant and is designed to handle large files efficiently. It provides optimizations, such as lazy parsing and zero-copy parsing, to minimize memory usage and improve performance.
-
-Example:
-
-```rust
-let mut file = File::open("spreadsheet.csv").unwrap();
-let mut contents = String::new();
-file.read_to_string(&mut contents).unwrap();
-let mut reader = ReaderBuilder::new()
-    .has_headers(true)
-    .delimiter(b',')
-    .from_reader(contents.as_bytes());
-for result in reader.records() {
-    let record = result.unwrap();
-    println!("{:?}", record);
-}
-```
-
-
-## Diesel crate for ORM
-
-<https://crates.io/crates/diesel>
-
-The Rust Diesel crate is a high-level, type-safe ORM (Object-Relational Mapping) library for Rust that provides a convenient and safe way to interact with relational databases. It provides a set of tools and abstractions for working with SQL databases, allowing developers to write safe and efficient code when working with databases.
-
-Some of the key features of Rust Diesel include:
-
-* Type-safe queries: Rust Diesel allows developers to write SQL queries using Rust code, making it easy to construct complex queries while ensuring that they are type-safe.
-
-* Easy to use: Rust Diesel provides a simple and intuitive API for working with databases, making it easy to get started with database programming in Rust.
-
-* High performance: Rust Diesel uses Rust's zero-cost abstractions and compile-time code generation to provide high performance when interacting with databases.
-
-* Support for multiple databases: Rust Diesel supports a wide range of databases, including PostgreSQL, MySQL, and SQLite.
-
-* Schema migrations: Rust Diesel provides a simple and powerful schema migration system, making it easy to manage changes to the database schema over time.
-
-
-## Diesel crate - example
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/diesel/hello_world_with_sqlite)
-
-The Diesel crate is sophisticated because its typical use involves SQL migrations, database connections, automatic conversions from records to structs, and much more. The Diesel tutorial is excellent and well worth reading. This page has elided excerpts, to give you a taste.
-
-Diesel uses schema macros, typically in a file `schema.rs`:
-
-```rust
-diesel::table! {
-    posts (id) {
-        id -> Int4,
-        title -> Varchar,
-    }
-}
-```
-
-Diesel uses model structs, typically in a file `models.rs`:
-
-```rust
-#[derive(Debug, Queryable, Identifiable, AsChangeset)]
-pub struct Post {
-    pub id: i32,
-    pub title: String,
-}
-```
-
-Diesel uses database connections such as:
-
-```rust
-let mut connection = 
-    SqliteConnection.establish("db.sqlite")
-    .expect("Error connecting to database");
-```
-
-Diesel uses Domain-Specific Language (DSL) such as:
-
-```rust
-use self::schema::posts::dsl::*;
-let results = posts
-    .load::<Post>(connection)
-    .expect("Error loading posts");
-for post in results {
-    println!("{}", post.title);
-}
-```
-
-
-## Polars crate for data analysis
-
-<https://crates.io/crates/polars>
-
-The Rust Polars crate is a data manipulation and analysis library for the Rust programming language. It is designed to provide a fast, efficient, and easy-to-use interface for working with large datasets.
-
-At its core, Rust Polars is built on top of the Apache Arrow memory format, which provides a standard way of representing data in memory. This allows Rust Polars to take advantage of the performance benefits of Arrow, such as zero-copy data access and efficient memory utilization.
-
-Rust Polars provides a DataFrame API, which is similar to the DataFrame API in popular data analysis tools like Pandas for Python and the tidyverse in R. This API allows users to perform a wide variety of operations on their data, such as filtering, aggregation, grouping, and merging.
-
-Some of the key features of Rust Polars include:
-
-* Fast performance: Rust Polars is designed to be as fast as possible, with many operations being implemented using parallel processing to take advantage of multi-core CPUs.
-
-* Easy-to-use API: The DataFrame API is designed to be easy to learn and use, with many common operations being implemented using a fluent, chainable syntax.
-
-* Flexible data types: Rust Polars supports a wide variety of data types, including strings, numbers, dates, times, and more.
-
-* Integration with other Rust libraries: Rust Polars can be easily integrated with other Rust libraries, such as Serde for serialization and deserialization.
-
-Overall, Rust Polars is a powerful data analysis library that provides a fast, efficient, and easy-to-use interface for working with large datasets in Rust.
-
-
-## Rusqlite crate for SQLite databases
-
-<https://crates.io/crates/rusqlite>
-
-The Rust Rusqlite crate is a library for working with SQLite databases. It provides many methods for querying and modifying data in SQLite databases, including prepared statements, transactions, and more.
-
-Example of how to use Rusqlite to create create a table, insert data into the table, and select data from the table:
-
-```rust
-fn main() -> Result<()> {
-    let conn = Connection::open(":memory:")?;
-    conn.execute(
-        "CREATE TABLE person (
-            id    INTEGER PRIMARY KEY,
-            name  TEXT NOT NULL,
-            age   INTEGER NOT NULL
-        )",
-        [],
-    )?;
-    conn.execute(
-        "INSERT INTO person (id, name, age) VALUES (?1, ?2, ?3)",
-        ["1", "Alice", "30"],
-    )?;
-    let name: String = conn.query_row(
-        "SELECT name FROM person WHERE id=1",
-        [],
-        |row| row.get(0),
-    )?;
-    println!("{}", name);
-    Ok(())
-}
-```
-
-
-## sqlx crate for SQL databases
-
-<https://crates.io/crates/sqlx>
-
-
-The Rust sqlx crate provides a type-safe, asynchronous, and composable SQL interface for working with databases. It is designed to make working with databases in Rust easier and more productive, while still being fast and efficient.
-
-sqlx supports a wide range of databases, including PostgreSQL, MySQL, SQLite, and Microsoft SQL Server. It uses Rust's type system to provide a safe and ergonomic way to write SQL queries, while still allowing for raw SQL queries if needed.
-
-One of the key features is support for async/await syntax, which allows for non-blocking database queries and operations. This makes it easy to write efficient, high-performance database code in Rust that can handle large numbers of concurrent requests.
-
-In addition to its core functionality, sqlx provides a number of other useful features, such as support for migrations, prepared statements, transactions, automatic type conversions, and more. It also has excellent documentation and a friendly and helpful community, which makes it easy to get started and solve problems as they arise.
-
-
-### Dependencies
-
-When you add sqlx to `Cargo.toml`, you must choose feature providers for your specific database, and for Transport Layer Security (TLS). Also, sqlx versions have different options, so be sure to check the documentation.
-
-```toml
-[dependencies]
-sqlx = {
-    version = "0.6",
-    features = [ "sqlite", "runtime-tokio-rustls" ]
-}
-tokio = { version = "1", features = ["full"] }
-```
-
-
-## sqlx crate - example
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/sqlx/create_table_insert_into_select)
-
-Example to create a table, insert data, and select data:
-
-```rust
-use sqlx::{SqlitePool, Row};
-
-#[tokio::main]
-async fn main() -> Result<(), sqlx::Error> {
-    // Create an in-memory database
-    let db_url = "sqlite::memory:";
-
-    // Create a database connection pool
-    let pool = SqlitePool::connect(db_url).await?;
-
-    // Create a table
-    sqlx::query("\
-        CREATE TABLE IF NOT EXISTS users (\
-        id INTEGER PRIMARY KEY NOT NULL,\
-        name VARCHAR NOT NULL );\
-    ").execute(&pool).await?;
-
-    // Insert data
-    sqlx::query("\
-        INSERT INTO users values (1, 'Alice'), (2, 'Bob');\
-    ").execute(&pool).await?;
-
-    // Select data
-    let rows = sqlx::query("\
-        SELECT * from users;"
-    ).fetch_all(&pool).await?;
-
-    // Print data
-    for row in rows {
-        println!("id {}, name {:?}",
-            row.get::<i32, &str>("id"),
-            row.get::<String, &str>("name")
-        );
-    }
-    Ok(())
-}
-```
-
-
-## ed25519_dalek crate
-
-<https://crates.io/crates/ed25519_dalek>
-
-The Rust ed25519_dalek crate provides cryptographic message signing, verifying,
-and related techniques to ensure the authenticity and integrity of a message. 
-
-Ed25519 is a type of elliptic curve cryptography (ECC) that uses the EdDSA
-(Edwards-curve Digital Signature Algorithm) signature scheme, and named after
-the prime field of order 2^255-19, which is the field over which the elliptic
-curve is defined.
-
-Ed25519 was designed to be a fast, secure, and efficient signature algorithm for
-use in a variety of cryptographic applications, including key agreement,
-encryption, and authentication. It was developed by Daniel J. Bernstein, Niels
-Duif, Tanja Lange, Peter Schwabe, and Bo-Yin Yang.
-
-The crate creates a digital signature, which is a mathematical algorithm that
-creates a unique code that represents the contents of the message. The digital
-signature is then attached to the message, indicating that the message has not
-been altered or tampered with, and that it originated from a particular sender.
-
-When the recipient receives the message, they can use the sender's public key to
-decrypt the digital signature, and verify that the message is not altered or corrupted,
-and that the message originated from the sender who possesses the private key.
-
-Cryptographic message signing is widely used in electronic communication to
-ensure the authenticity and integrity of messages, including email, digital
-documents, and online transactions. It provides a way for parties to verify the
-identity of each other and ensure that the information exchanged is trustworthy.
-
-
-## ed25519_dalek crate - example
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/ed25519-dalek/signing_and_verifying)
-
-Example:
-
-```rust
-use rand::rngs::OsRng;
-
-use ed25519_dalek::{
-    Signer, SigningKey, Signature, 
-    Verifier, VerifyingKey
-};
-
-pub fn main() {
-    // Create a message that we will sign.
-    let message: &[u8] = b"Hello, World!";
-
-    // Load a random number generator (RNG).
-    let mut rng = OsRng{};
-    
-    // Generate a signing key a.k.a. a keypair
-    let signing_key: SigningKey = 
-        SigningKey::generate(&mut rng);
-
-    // Sign the message
-    let signature: Signature = signing_key.sign(message);
-    
-    // Get the verifying key a.k.a. the keypair private key.
-    let verifying_key: VerifyingKey = 
-        signing_key.verifying_key();
-
-    // Verify the signature.
-    assert!(verifying_key.verify(message, &signature).is_ok());
-}
-```
-
-
-# Crates we like for web applications
-
-This page is a section divider and intentionally blank.
-
-
-## axum crate for web services
-
-<https://crates.io/crates/axum>
-
-The Rust axum crate provides a fast, low-level web framework for building microservices and APIs. Axum is designed to be easy to use, performant, and composable, meaning you can mix and match components to build a custom web application that meets your needs.
-
-Axum is built on top of Rust's async/await syntax and uses Tokio as its underlying async runtime. This means that Axum is well-suited for building high-performance, non-blocking web services that can handle a large number of concurrent requests.
-
-Axum provides a number of features that make it a powerful tool for building web applications, including:
-
-* Routing: Axum makes it easy to define routes for your web application, allowing you to map URLs to specific functions or handlers.
-
-* Middleware: Axum supports middleware, which are functions that can be run before or after a request is processed. Middleware can be used for things like logging, authentication, and authorization.
-
-* Error handling: Axum provides a flexible error handling system that allows you to handle errors in a way that makes sense for your application.
-
-* Testing: Axum includes tools for testing your web application, making it easy to write automated tests for your code.
-
-Overall, Rust axum is well-suited for building microservices and APIs. If you're looking for a fast, low-level framework that gives you complete control over your web application, then Axum is definitely worth considering.
-
-
-## axum crate - example
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/axum/hello_world)
-
-Example of using the axum crate to build a web service in Rust:
-
-```rust
-use axum::{Router, routing::get};
-use std::net::SocketAddr;
-
-async fn hello() -> &'static str {
-    "Hello, World!"
-}
-
-#[tokio::main]
-async fn main() {
-    let app = Router::new().route("/", get(hello));
-    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
-    println!("Listening on http://{}", addr);
-    axum::Server::bind(&addr)
-        .serve(app.into_make_service())
-        .await
-        .unwrap();
-}
-```
-
-In this example, we define a web service that receieves HTTP GET requests, and responds with "Hello, World!".
-
-We define an asynchronous function `hello`. It returns the static string "Hello, World!".
-
-We define a router using the `Router::new()` function, and use the `route()` method to define a route that maps the root URL (`"/"`) to the hello_world handler function.
-
-We create a SocketAddr object representing the address and port on which the web service will listen (`127.0.0.1:3000`), and print a message indicating that the service is listening on that address.
-
-We use the `axum::Server` type to bind the address to the web service, and serve it using the `serve()` method.
-
-
-## hyper crate for HTTP clients/servers
-
-<https://crates.io/crates/hyper>
-
-The Rust Hyper crate is a popular library for writing HTTP clients and servers in the Rust programming language. It provides a high-level and efficient API for handling HTTP requests and responses, as well as low-level control over the details of the HTTP protocol.
-
-With the Hyper crate, developers can easily build custom HTTP clients and servers, handle HTTP authentication, manage cookies, and perform SSL/TLS encryption. It supports both synchronous and asynchronous programming styles, and is compatible with Rust's built-in async/await syntax.
-
-One of the key advantages of using the Hyper crate is its performance. It's built using Rust's memory safety and zero-cost abstractions, which makes it fast and efficient. Additionally, the Hyper crate is designed to be modular and extensible, which makes it easy to add custom functionality and plugins.
-
-hyper is a relatively low-level library, meant to be a building block for libraries and applications.
-
-* If you want a convenient HTTP client, then consider `reqwest`.
-
-* If you want a convenient HTTP server, then consider `warp`.
-
-Both are built on top of hyper.
-
-
-## prost crate for protocol buffers
-
-The Rust prost crate is a code generator and runtime library for Protocol Buffers, a language-agnostic data serialization format originally developed by Google. The crate enables Rust developers to define Protocol Buffer messages in Rust code, which are then compiled into serialization and deserialization code at build time.
-
-The generated code provides a strongly-typed API for working with Protocol Buffer messages, enabling efficient serialization and deserialization of data. The runtime library provides functions for reading and writing Protocol Buffer messages to and from files or streams, as well as utilities for working with message fields, extensions and enumerations.
-
-In summary, the Rust prost crate simplifies the process of working with Protocol Buffers in Rust, enabling efficient and safe data serialization and deserialization, while also providing a granular API for working with message fields and structures.
-
-
-
-## prost crate - example
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/prost/serialize_deserialize_protobuf)
-
-Example code to serialize and deserialize a simple protobuf message:
-
-```rust
-use prost::Message;
-
-// Define a simple protobuf message
-#[derive(Clone, PartialEq, Message)]
-pub struct MyMessage {
-    #[prost(int32, tag="1")]
-    pub my_field: i32,
-}
-
-// Serialize the message to bytes
-let message = MyMessage { my_field: 42 };
-let mut bytes = Vec::new();
-message.encode(&mut bytes).unwrap();
-
-// Deserialize the message from bytes
-let decoded = MyMessage::decode(bytes.as_slice()).unwrap();
-
-// Verify the decoded message is the same as the original
-assert_eq!(message, decoded);
-```
-
-In this example code, we define a simple protobuf message `MyMessage` with a single field `my_field`. We use Prost's `#[derive(Message)]` macro to generate the serialization and deserialization code for this message.
-
-We then create an instance of `MyMessage`, serialize it to bytes using the `encode()` method, and deserialize it back to a `MyMessage` instance using the `decode()` method.
-
-Finally, we verify that the serialized and deserialized messages are equal using the `assert_eq()` macro.
-
-
-## reqwest crate for HTTP requests
-
-<https://crates.io/crates/reqwest>
-
-The Rust reqwest crate is for making HTTP requests. It is built on top of the Rust async runtime, which makes it efficient and suitable for high-performance networking applications.
-
-With reqwest, you can easily make HTTP requests and handle responses in a synchronous or asynchronous manner. The crate provides a set of simple and intuitive APIs for performing HTTP GET, POST, PUT, DELETE, and other types of requests. It also includes support for request/response headers, URL parameters, and request/response bodies.
-
-One of the key features of reqwest is its ability to handle HTTPS connections by default, using the native TLS implementation in Rust. This means that you can securely connect to HTTPS endpoints without having to add any additional dependencies or configuration.
-
-The reqwest crate also includes support for more advanced features like connection pooling, timeouts, cookies, authentication, and logging.
-
-Example:
-
-```rust
-use reqwest::Error;
-
-async fn make_request(url: &str) -> Result<String, Error> {
-    let response = reqwest::get(url).await?;
-    let body = response.text().await?;
-    Ok(body)
-}
-
-#[tokio::main]
-async fn main() -> Result<(), Error> {
-    let url = "https://www.example.com";
-    let response_body = make_request(url).await?;
-    println!("{}", response_body);
-    Ok(())
-}
-```
-
-
-## Sycamore crate for reactive front-end
-
-<https://crates.io/crates/sycamore>
-
-The Rust sycamore crate provides a reactive front-end web development framework. It uses a Virtual DOM (VDOM) and a declarative syntax that is similar to ReactJS.
-
-The sycamore crate provides various features and functionalities that help developers build fast and high-performance web applications. It supports various event handling, state management, and data flow features.
-
-* Lightning speed: Sycamore harnesses the full power of Rust via WebAssembly, giving you full control over performance.
-
-* Ergonomic and intuitive: Write code that feels natural. Everything is built on reactive primitives without a cumbersome virtual DOM.
-
-* No JavaScript: Create apps using Sycamore without touching a single line of JS.
-
-With sycamore, you can create dynamic and responsive web applications that allow efficient dynamic changes without the need for full-page refreshes. Moreover, sycamore has been designed to be compatible with most of the modern web browsers and it provides a scalable API that can be extended easily.
-
-Example of a sycamore component:
-
-```rust
-#[component]
-fn Hello<G: Html>(cx: Scope) -> View<G> {
-    view! { cx,
-        p { "Hello, World!" }
-    }
-}
-```
-
-
-## Sycamore crate - example
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/sycamore/hello_world)
-
-You may want/need to add a WASM target:
-
-```sh
-rustup target add wasm32-unknown-unknown
-```
-
-Edit file `main.rs` which will contain your website code:
-
-```rust
-use sycamore::prelude::*;
-
-#[component]
-fn Hello<G: Html>(cx: Scope) -> View<G> {
-    view! { cx,
-        p { "Hello, World!" }
-    }
-}
-
-fn main() {
-    sycamore::render(|cx| {
-        view! { cx, Hello {} }
-    });
-}
-```
-
-Create top-level file `index.html`:
-
-```html
-<!DOCTYPE html>
-<html>
-  <body></body>
-</html>
-```
-
-Serve the website by using the `trunk` build tool:
-
-```sh
-trunk serve
-```
-
-Browse <http://localhost:8000>
-
-
-## Tokio crate for async/concurrency
-
-<https://crates.io/crates/tokio>
-
-The Rust Tokio crate is a widely used library for building asynchronous and concurrent applications. It provides a runtime for executing asynchronous tasks and a set of libraries for building networking and other I/O-heavy applications.
-
-Edit file `Cargo.toml`:
-
-```toml
-[dependencies]
-tokio = { version = "1", features = ["full"] }
-```
-
-Example to connect to a mini-redis server:
-
-```rust
-use mini_redis::{client, Result};
-
-#[tokio::main]
-async fn main() -> Result<()> {
-    // Open a connection to the mini-redis address.
-    let mut client = client::connect("127.0.0.1:6379").await?;
-
-    // Set the key "hello" with value "world"
-    client.set("hello", "world".into()).await?;
-
-    // Get key "hello"
-    let result = client.get("hello").await?;
-
-    println!("got value from the server; result={:?}", result);
-
-    Ok(())
-}
-```
-
-
-## Tokio crate - example HTTP server
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/tokio/http_server)
-
-You can use Tokio to build network applications, such as an HTTP server:
-
-```rust
-use tokio::io::{AsyncReadExt, AsyncWriteExt};
-use tokio::net::TcpListener;
-
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let listener = TcpListener::bind("127.0.0.1:8080").await?;
-
-    loop {
-        let (mut socket, _) = listener.accept().await?;
-
-        tokio::spawn(async move {
-            let mut buf = [0; 1024];
-            let n = socket.read(&mut buf).await.unwrap();
-            let request = String::from_utf8_lossy(&buf[..n]);
-            println!("Received request:\n{}", request);
-
-            let response = "HTTP/1.1 200 OK\r\n\r\nHello!";
-            socket.write_all(response.as_bytes())
-            .await.unwrap();
-        });
-    }
-}
-```
-
-This defines a main function that binds to port 8080 and listens for incoming TCP connections.
-
-When a connection is accepted, a new task is spawned to handle the request asynchronously.
-
-The task reads the incoming data from the socket, prints it to the console, and sends a response back to the client.
-
-
-## tonic crate for gRPC
-
-<https://crates.io/crates/tonic>
-
-The Rust tonic crate is a popular asynchronous gRPC framework that enables developers to quickly build high-performance and scalable client and server applications using Rust programming language.
-
-gRPC is an open-source, high-performance Remote Procedure Call (RPC) framework. It is designed to be efficient and lightweight and uses Protocol Buffers for serialization, which can give 10 times faster performance over REST with JSON. gRPC allows two services to communicate with each other across different languages and platforms.
-
-The tonic crate provides a set of tools for creating and managing gRPC-based APIs, with support for streaming, bidirectional communication, and response compression. Features also include load balancing, custom metadata, authentication, and health checking. It uses asynchronous programming concepts to enable efficient handling of large numbers of concurrent user requests, making it ideal for building real-time communication applications.
-
-
-### tonic on Tokio
-
-<https://crates.io/crates/tokio>
-
-The Rust tonic crate is built on top of the Tokio runtime, which provides a high-performance, asynchronous, event-driven architecture that enables Rust applications to run efficiently and reliably. 
-
-Tokio also supports a range of programming languages and platforms, including C++, Python, Java, and .NET, making it a versatile solution for building cross-platform applications. F
-
-
-## tonic crate - example server
-
-Example tonic gRPC server; this code depends on protocol definitions that are in a *.proto file, not shown here. For more, see the Rust Quick Guide git repository projects, which has a complete tonic "helloworld" server and client.
-
-```rust
-use tonic::{transport::Server, Request, Response, Status};
-
-use hello_world::greeter_server::{Greeter, GreeterServer};
-use hello_world::{HelloReply, HelloRequest};
-
-pub mod hello_world {
-    tonic::include_proto!("helloworld");
-}
-
-#[derive(Debug, Default)]
-pub struct MyGreeter {}
-
-#[tonic::async_trait]
-impl Greeter for MyGreeter {
-    async fn say_hello(
-        &self,
-        request: Request<HelloRequest>,
-    ) -> Result<Response<HelloReply>, Status> {
-        println!("Got a request: {:?}", request);
-
-        let reply = hello_world::HelloReply {
-            message: format!("Hello {}!", request.into_inner().name).into(),
-        };
-
-        Ok(Response::new(reply))
-    }
-}
-
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let addr = "[::1]:50051".parse()?;
-    let greeter = MyGreeter::default();
-
-    Server::builder()
-        .add_service(GreeterServer::new(greeter))
-        .serve(addr)
-        .await?;
-
-    Ok(())
-}
-```
-
-
-## tonic crate - example client
-
-Example tonic gRPC client; this code depends on protocol definitions that are in a *.proto file, not shown here. For more, see the Rust Quick Guide git repository projects, which has a complete tonic "helloworld" server and client.
-
-```rust
-use hello_world::greeter_client::GreeterClient;
-use hello_world::HelloRequest;
-
-pub mod hello_world {
-    tonic::include_proto!("helloworld");
-}
-
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let mut client = GreeterClient::connect("http://[::1]:50051").await?;
-
-    let request = tonic::Request::new(HelloRequest {
-        name: "Tonic".into(),
-    });
-
-    let response = client.say_hello(request).await?;
-
-    println!("RESPONSE={:?}", response);
-
-    Ok(())
-}
-```
-
-
-## yew crate for client-side web app
-
-The Rust yew crate is a web development framework that allows developing fast and efficient client-side web applications using Rust programming language. The Yew crate uses a virtual DOM implementation to efficiently handle changes and updates to the user interface. 
-
-Key features include:
-
-- Single-file components: This feature allows developers to write reusable code components in a single file, making it easier to manage and maintain the codebase.
-
-- Rust type system: With Rust's type system, developers can write safer, more efficient code with fewer bugs and memory errors.
-
-- Reactive programming: The Yew crate allows developers to use reactive programming, which makes it easier to manage and update the UI automatically as state and data changes.
-
-- Web assembly support: The Rust yew crate supports web assembly, which makes it easier to write web apps that can run natively on desktop and mobile devices.
-
-The Yew crate is similar to React in terms of concepts and usage, but it is written entirely in Rust, and it is optimized for performance and safety.
-
-
-## yew crate - example
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/yew/hello_world)
-
-Example of a web app that says "Hello, World!":
-
-```rust
-use yew::prelude::*;
-
-#[function_component(App)]
-fn app() -> Html {
-    html! {
-        <h1>{ "Hello, World!" }</h1>
-    }
-}
-
-fn main() {
-    yew::Renderer::<App>::new().render();
-}
-```
-
-This code creates a Yew component that returns HTML, then renders the component to the web page.
-
-
-
-# Crates we like for graphics & games
-
-This page is a section divider and intentionally blank.
-
-
-## gtk4 crate for GTK GUIs
-
-<https://crates.io/crates/gtk4>
-
-The Rust gtk4 crate is a set of bindings to the GTK4 graphical user interface toolkit. GTK4 is a widely used toolkit for creating cross-platform graphical user interfaces. GTK helps developers build modern desktop applications that are runnable on Linux, Windows, and macOS.
-
-The crate provides a set of APIs for building GTK GUIs, including building widgets such as buttons, labels, text fields, menus, scrolling windows, styled look and feel, and more. The crate also offers some Rust-specific abstractions, such as closures and iterators, to make working with the GTK4 toolkit more ergonomic for Rust.
-
-For a gentle introduction to Rust and GTK otegher,  we recommend the online book GUI development with Rust and GTK 4.
-
-<https://gtk-rs.org/gtk4-rs/stable/latest/book/>
-
-Caveats:
-
-* You may need to install additional software. For example, on macOS you can install GTK4 via brew by running `brew install gtk4`.
-
-* GTK is not thread-safe. Accordingly, none of the crate's structs implement the `Send` trait or `Sync` trait.
-
-* The GTK bindings are well supported, although you'll often need to use the C documentation, according to Blessed.rs.
-
-* By default this crate provides only GTK 4.0 APIs. You can access additional functionality by selecting one of the `v4_2`, `v4_4`, etc. features. Take care when choosing the version to target: some of your users might not have easy access to the latest ones.
-
-
-## gtk4 crate - example
-
-[Runnable project](https://github.com/SixArm/rust-summaries/tree/main/projects/crates/gtk4/hello_world)
-
-Example "Hello, World!" using GTK from the docs:
-
-```rust
-use gtk4 as gtk;
-use gtk::prelude::*;
-use gtk::{Application, ApplicationWindow};
-
-fn main() -> glib::ExitCode {
-    let app = Application::builder()
-        .application_id("org.example.HelloWorld")
-        .build();
-
-    app.connect_activate(|app| {
-        // We create the main window.
-        let window = ApplicationWindow::builder()
-            .application(app)
-            .default_width(320)
-            .default_height(200)
-            .title("Hello, World!")
-            .build();
-
-        // Show the window.
-        window.present();
-    });
-
-    app.run()
-}
-```
-
-Notes:
-
-* The gtk4 crate is usually renamed to gtk. You can find an example in the features section for how to do this globally in your Cargo.toml.
-
-* GTK needs to be initialized before use by calling the function `init`. When you create an `Application` struct, this will call `init` for you.
-
-
-## egui crate for pure Rust GUIs
-
-<https://crates.io/crates/egui>
-
-The Rust egui crate is easy-to-use, lightweight solution for creating graphical user interfaces (GUIs) using pure Rust. The crate uses OpenGL for rendering, which enables it to offer high performance and low resource usage. It also supports a wide range of widgets, such as buttons, text inputs, sliders, and checkboxes, making it a versatile option for creating various types of user interfaces.
-
-One of the key features of the Rust egui crate is its ability to run completely in a web browser without needing any server-side code. This makes it ideal for creating browser applications or web-based dashboards. Additionally, it offers a range of customization options, including the ability to change colors, fonts, and layout of the user interface.
-
-Example excerpt of egui:
-
-```rust
-egui::CentralPanel::default().show(ctx, |ui| {
-    ui.heading("Hello, World!");
-    ui.horizontal(|ui| {
-        let name_label = ui.label("Your name: ");
-        ui.text_edit_singleline(&mut self.name)
-            .labelled_by(name_label.id);
-    });
-    ui.add(egui::Slider::new(&mut self.age, 0..=120).text("age"));
-    ui.label(format!("name '{}', age {}", self.name, self.age));
-});
-```
-
-The Rust eframe crate is the official egui framework crate. If you are planning to write an app for web or native, and want to use egui for everything, then eframe is for you.
-
-Example excerpt of eframe:
-
-```
-let options = eframe::NativeOptions {
-    initial_window_size: Some(egui::vec2(320.0, 240.0)),
-    ..Default::default()
-};
-eframe::run_native(
-    "My App",
-    options,
-    Box::new(|_cc| Box::new(MyApp::default())),
-)
-```
-
-
-## Bevy crate for game programming
-
-<https://crates.io/crates/bevy>
-
-The Rust bevy crate provides ways to develop high-performance games with modern graphics and audio capabilities. Bevy offers a data-driven, component-based architecture that makes it easy to create and modify game mechanics, systems, and entities in a flexible and scalable manner.
-
-Bevy use an Entity-Component-System (ECS) architecture, which organizes game data into entities that are made up of components, and systems that process those components. ECS allows for powerful and flexible game logic that can be easily extended and modified.
-
-Bevy uses event-driven design. Events that trigger specific actions and behaviors, such as when a user clicks a button or a new object is spawned in the game world. Events can be used to control game flow, trigger animations, or handle user input.
-
-Bevy includes an asset management system that enables developers to easily load and use resources such as textures, meshes, and sound effects within their games.
-
-Bevy includes utility functions and components that make it easy to work with common game development tasks such as handling player movement, collision detection, and input devices.
-
-In addition to its core features, Rust bevy also offers a growing ecosystem of plugins and extensions that expand its capabilities. These include plugins for physics simulations, networking, and more.
-
-Bevy's official website has a Getting Started guide, which provides a step-by-step approach to build a simple game using the Bevy ecosystem, including graphics and user interaction. Bevy's Example Gallery showcases a variety of games and applications, providing the source code to explore and learn from. The Bevy Book is an open-source book that covers in-depth topics on Bevy, including game but also interactive applications design and code.
-
-
-## Bevy crate - example
-
-<!-- [Runnable project](!projects/crates/bevy) -->
-
-Example sprite animation with a 2D camera view:
-
-```rust
-use bevy::{prelude::*, render::camera::OrthographicProjection};
-use bevy::render::pass::ClearColor;
-
-fn main() {
-    App::build()
-        .add_plugins(DefaultPlugins)
-        .add_startup_system(setup.system())
-        .add_system(animate.system())
-        .run();
-}
-
-/// Set up a 2D camera view and a simple white sprite
-fn setup(
-    mut commands: Commands,
-    mut materials: ResMut<Assets<ColorMaterial>>
-) {
-    commands.spawn_bundle(OrthographicCameraBundle::new_2d());
-    let material_handle = materials.add(Color::WHITE.into());
-    let sprite_bundle = SpriteBundle {
-        material: material_handle,
-        sprite: Sprite::new(Vec2::new(100.0, 100.0)),
-        ..Default::default()
-    };
-    commands.spawn_bundle(sprite_bundle);
-}
-
-/// Animate a sprite's rotation and scale
-fn animate(time: Res<Time>, mut query: Query<&mut Sprite>) {
-    for mut sprite in query.iter_mut() {
-        let sec = time.seconds_since_startup() as f32;
-        let scale = (0.5 * ((secs * 0.5).sin() + 1.0)).max(0.1);
-        let rotation = secs * 2.0;
-        sprite.scale = Vec2::new(scale, scale);
-        sprite.rotate(rotation);
-    }
-}
-```
-
-
-## macroquad crate for simple games
-
-<https://crates.io/crates/macroquad>
-
-The Rust macroquad crate is a simple and easy to use game library for Rust programming language.
-
-macroquad attempts to avoid any rust-specific programming concepts like lifetimes/borrowing, making it very friendly for rust beginners.
-
-Features:
-
-* Same code for all supported platforms, no platform dependent defines required
-* Efficient 2D rendering with automatic geometry batching
-* Minimal amount of dependencies: build after cargo clean takes only 16s on x230(~6years old laptop)
-* Immediate mode UI library included
-* Single command deploy for both WASM and Android build instructions
-
-Example:
-
-```rust
-use macroquad::prelude::*;
-
-#[macroquad::main("BasicShapes")]
-async fn main() {
-    loop {
-        clear_background(RED);
-
-        draw_line(40.0, 40.0, 100.0, 200.0, 15.0, BLUE);
-        draw_text("HELLO", 20.0, 20.0, 20.0, DARKGRAY);
-
-        next_frame().await
-    }
-}
-```
-
-
-# Rust going forward
-
-This page is a section divider and intentionally blank.
 
 
 ## Rust governance
@@ -6072,11 +3434,6 @@ The Rust roadmap is divided into three main categories:
 * Community: This category includes initiatives to make the Rust community more diverse, inclusive, and welcoming, such as improving the Rust governance and decision-making process, promoting Rust education and outreach, and supporting the Rust community events and conferences.
 
 The Rust roadmap is not a fixed plan, and it is subject to change based on feedback and new developments. The Rust core team periodically updates the roadmap to reflect new priorities, challenges, and opportunities. Developers who want to contribute to Rust or use Rust for their projects can consult the roadmap to understand the direction and focus of the language and the community.
-
-
-# Backmatter
-
-This page is a section divider and intentionally blank.
 
 
 ## About the author

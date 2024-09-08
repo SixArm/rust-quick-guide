@@ -30,7 +30,7 @@ help:
 
 book.md:
 	@echo "make book.md"
-	book-binder book.yml book.md "${top}/README.md" "https://github.com/SixArm/rust-quick-guide/tree/main/projects"
+	book-binder book.yml "${top}/README.md" book.md "${top}" "https://github.com/SixArm/rust-quick-guide/tree/main/projects"
 	rsync -av book.md  "${top}/rust-quick-guide-1.0.0.md"
 
 book.pdf:

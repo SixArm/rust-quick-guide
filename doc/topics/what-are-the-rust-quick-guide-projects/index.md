@@ -1,6 +1,6 @@
-# What are Rust Quick Guide' projects?
+# What are the Rust Quick Guide projects?
 
-<https://github.com/sixarm/rust-summaries>
+<https://github.com/sixarm/rust-quick-guide>
 
 Rust Quick Guide provides sample projects. These projects are small Rust programs that you can read, build, and run. Each project demonstrates one quick topic summary, or demonstrates one crate. The projects are in the Rust Quick Guide repository, in the `projects` directory.
 

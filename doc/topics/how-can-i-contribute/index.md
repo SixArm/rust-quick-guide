@@ -15,7 +15,7 @@ Anyone can edit these summaries to improve them, such as to edit an existing pag
 
 All the work is available via our GitHub repostory.
 
-Link: <https://github.com/sixarm/rust-summaries>
+Link: <https://github.com/sixarm/rust-quick-guide>
 
 All the projects are available in the `projects` directory.
 
