@@ -9,7 +9,8 @@
 #     export PATH="$PATH:/Library/TeX/texbin/"
 #
 
-TOP = $(shell git rev-parse --show-toplevel)
+top = $(shell git rev-parse --show-toplevel)
+key = $(shell basename ${top})
 
 all: book.md book.pdf
 
@@ -29,10 +30,10 @@ help:
 
 book.md:
 	@echo "make book.md"
-	book-binder book.yml book.md "$$TOP/README.md" "https://github.com/SixArm/rust-summaries/tree/main/projects"
+	book-binder book.yml book.md "${top}/README.md" "https://github.com/SixArm/rust-quick-guide/tree/main/projects"
+	rsync -av book.md  "${top}/rust-quick-guide-1.0.0.md"
 
 book.pdf:
 	@echo "make book.pdf"
 	pandoc-from-markdown-to-pdf book.md -o book.pdf
-	rsync -av book.md  "../rust-summaries-book-1.0.0.md"
-	rsync -av book.pdf "../rust-summaries-book-1.0.0.pdf"
+	rsync -av book.pdf "${top}/rust-quick-guide-1.0.0.pdf"
