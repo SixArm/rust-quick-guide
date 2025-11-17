@@ -53,6 +53,11 @@ This is because it gets difficult to update dependencies once a cargo audit spit
 Ideally require these steps for all code check ins.
 
 
+## Defensive programming
+
+https://corrode.dev/blog/defensive-programming/
+
+
 ## Use macros sparingly
 
 Don't use macros unless absolutely necessary.
